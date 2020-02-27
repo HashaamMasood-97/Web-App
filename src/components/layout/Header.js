@@ -18,7 +18,7 @@ import{Link} from 'react-router-dom';
             <li><a href="about">About</a></li>
             <li><a href="login">Login</a></li>
             <li><a href="another_page.html">Doctors</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contactus">Contact Us</a></li>
             
             
           </ul>
