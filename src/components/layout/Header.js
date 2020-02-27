@@ -15,7 +15,7 @@ import{Link} from 'react-router-dom';
           <ul id="menu">
             {/* put class="selected" in the li tag for the selected page - to highlight which page you're on */}
             <li><a href="/">Home</a></li>
-            <li><a href="about">about</a></li>
+            <li><a href="about">About</a></li>
             <li><a href="login">Login</a></li>
             <li><a href="another_page.html">Doctors</a></li>
             <li><a href="contact.html">Contact Us</a></li>

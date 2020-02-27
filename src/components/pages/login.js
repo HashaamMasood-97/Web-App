@@ -16,8 +16,8 @@ export default function login() {
   
           {/* Login Form */}
           <form>
-            <input type="text" id="login" className="fadeIn second" name="login" placeholder="login" />
-            <input type="text" id="password" className="fadeIn third" name="login" placeholder="password" />
+            <input type="text" id="login" className="fadeIn second" name="login" placeholder="Username" />
+            <input type="text" id="password" className="fadeIn third" name="login" placeholder="Password" />
             <input type="submit" className="fadeIn fourth" defaultValue="Log In" />
           </form>
         
