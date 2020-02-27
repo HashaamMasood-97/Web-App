@@ -3,24 +3,29 @@ import{Link} from 'react-router-dom';
 
  function Header() {
     return (
-     <header style={headerStyle}>
-         <h1>Home Medical Service</h1>
-         <Link style={linkStyle} to= "/">Home </Link> |
-          <Link style={linkStyle} to="/about">  About </Link>  |
-          <Link style={linkStyle} to="/login"> Login</Link>
-     </header>
+        <div id="header">
+        <div id="logo">
+          <div id="logo_text">
+            {/* class="logo_colour", allows you to change the colour of the text */}
+            <h1><a href="index.html">Home<span className="logo_colour">Medic</span></a></h1>
+            <h2>We connect you to your desired doctor at your doorstep</h2>
+          </div>
+        </div>
+        <div id="menubar">
+          <ul id="menu">
+            {/* put class="selected" in the li tag for the selected page - to highlight which page you're on */}
+            <li><a href="/">Home</a></li>
+            <li><a href="about">about</a></li>
+            <li><a href="login">Login</a></li>
+            <li><a href="another_page.html">Doctors</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            
+            
+          </ul>
+        </div>
+      </div>
     )
 }
 
-const headerStyle={
-    background: '#333',
-    color: '#fff',
-     textAlign: 'center',
-    padding: '10px',
-}
-
-const linkStyle={
-    color: '#fff',
-    textDecoration: 'none'
-}
+ 
 export default Header;

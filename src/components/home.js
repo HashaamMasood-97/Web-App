@@ -11,25 +11,7 @@ export class home extends Component {
                       <meta httpEquiv="content-type" content="text/html; charset=windows-1252" />
                       <link rel="stylesheet" type="text/css" href="style/style.css" />
                       <div id="main">
-                        <div id="header">
-                          <div id="logo">
-                            <div id="logo_text">
-                              {/* class="logo_colour", allows you to change the colour of the text */}
-                              <h1><a href="index.html">Home<span className="logo_colour">Medic</span></a></h1>
-                              <h2>We connect you to your desired doctor at your doorstep</h2>
-                            </div>
-                          </div>
-                          <div id="menubar">
-                            <ul id="menu">
-                              {/* put class="selected" in the li tag for the selected page - to highlight which page you're on */}
-                              <li className="selected"><a href="index.html">Home</a></li>
-                              <li><a href="examples.html">Examples</a></li>
-                              <li><a href="page.html">first Page</a></li>
-                              <li><a href="another_page.html">B Page</a></li>
-                              <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                          </div>
-                        </div>
+                       
                         <div id="content_header" />
                         <div id="site_content">
                           <div id="banner" />
