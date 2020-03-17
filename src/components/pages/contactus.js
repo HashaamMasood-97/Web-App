@@ -1,8 +1,93 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './contactus.css';
+import axios from 'axios';
 
-export default function contactus() {
-    return (
+
+
+
+
+export class contactus extends Component {
+  
+  
+  constructor (props){
+    super(props)
+
+    this.onChangeCname=this.onChangeCname.bind(this);
+    this.onChangeCaddress=this.onChangeCaddress.bind(this);
+    this.onChangeCphone=this.onChangeCphone.bind(this);
+    this.onChangeCmessage=this.onChangeCmessage.bind(this);
+    
+    this.onSubmit=this.onSubmit.bind(this);
+
+
+
+
+
+this.state={
+
+ c_name: '',
+ c_address:'',
+ c_phone:'',
+ c_message:''
+
+}
+}
+
+onChangeCname(e){
+  this.setState({
+      c_name: e.target.value
+  });
+}
+
+onChangeCaddress(e){
+  this.setState({
+      c_address: e.target.value
+  });
+}
+
+
+onChangeCphone(e){
+  this.setState({
+      c_phone: e.target.value
+  });
+}
+
+
+onChangeCmessage(e){
+  this.setState({
+      c_message: e.target.value
+  });
+}
+
+
+
+onSubmit(e){
+  e.preventDefault(); 
+// code to connect backend 
+const newodo ={
+c_name: this.state.c_name,
+c_address: this.state.c_address,
+c_phone: this.state.c_phone,
+c_message: this.state.c_message
+
+};
+
+axios.post('http://localhost:3500/homemedic/add', newodo)
+.then(res => console.log(res.data));
+
+this.props.history.push('/');
+
+
+
+
+
+  }
+
+
+  
+  
+  render(){ 
+  return (
         
                 <div>
                   <title>Contact V15</title>
@@ -41,51 +126,46 @@ export default function contactus() {
                           Feel free to drop us a line below!
                         </span>
                       </div>
-                      <form className="contact100-form validate-form">
+                      <form className="contact100-form validate-form"  onSubmit={this.onSubmit}>
                         <div className="wrap-input100 validate-input" data-validate="Name is required">
                           <span className="label-input100">Full Name:</span>
-                          <input className="input100" type="text" name="name" placeholder="Enter full name" />
+                          <input className="input100"
+                           type="text"
+                            name="name" 
+                            placeholder="Enter full name" 
+                            value={this.state.c_name} 
+                            onChange={this.onChangeCname}/>
                           <span className="focus-input100" />
                         </div>
                         <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                           <span className="label-input100">Email:</span>
-                          <input className="input100" type="text" name="email" placeholder="Enter email addess" />
+                          <input className="input100" type="text" name="email" placeholder="Enter email addess" value={this.state.c_address}  onChange={this.onChangeCaddress} />
                           <span className="focus-input100" />
                         </div>
                         <div className="wrap-input100 validate-input" data-validate="Phone is required">
                           <span className="label-input100">Phone:</span>
-                          <input className="input100" type="text" name="phone" placeholder="Enter phone number" />
+                          <input className="input100" type="text" name="phone" placeholder="Enter phone number"  value={this.state.c_phone}  onChange={this.onChangeCphone} />
                           <span className="focus-input100" />
                         </div>
                         <div className="wrap-input100 validate-input" data-validate="Message is required">
                           <span className="label-input100">Message:</span>
-                          <textarea className="input100" name="message" placeholder="Your Comment..." defaultValue={""} />
+                          <textarea className="input100" name="message" placeholder="Your Comment..." defaultValue={""} value={this.state.c_message}  onChange={this.onChangeCmessage}/>
                           <span className="focus-input100" />
                         </div>
-                        <div className="container-contact100-form-btn">
-                          <button className="contact100-form-btn">
-                            <span>
-                              Submit
-                              <i className="fa fa-long-arrow-right m-l-7" aria-hidden="true" />
-                            </span>
-                          </button>
+
+                       
+                        <div className="form-group"  Align='center' >
+                       <input type="submit" value="Submit" className="btn btn-primary"  />
                         </div>
                       </form>
                     </div>
                   </div>
                   <div id="dropDownSelect1" />
-                  {/*===============================================================================================*/}
-                  {/*===============================================================================================*/}
-                  {/*===============================================================================================*/}
-                  {/*===============================================================================================*/}
-                  {/*===============================================================================================*/}
-                  {/*===============================================================================================*/}
-                  {/*===============================================================================================*/}
-                  {/*===============================================================================================*/}
-                  {/* Global site tag (gtag.js) - Google Analytics */}
+    
                 </div>
               );
             }
-          
+          }     
     
 
+          export default contactus

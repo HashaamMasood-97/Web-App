@@ -6,6 +6,7 @@ import login from './components/pages/login';
 import contactus from './components/pages/contactus';
 import './App.css';
 import home from './components/home';
+import patient from './components/pages/patient';
 
 
 class App extends Component {
@@ -14,12 +15,13 @@ class App extends Component {
       <Router>
     <div className="App">
      <div className="container">
-
+     
        <Header  />
-        <Route exact path="/" component={home} />
+     <Route exact path="/" component={home} />
      <Route path ="/about" component= {About} />
      <Route path ="/login" component= {login} />
      <Route path ="/contactus" component= {contactus} />
+     <Route path ="/patient" component= {patient} />
     
 
     </div>   

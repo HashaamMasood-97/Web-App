@@ -1,14 +1,20 @@
 import React from 'react'
 import{Link} from 'react-router-dom';
 
+
  function Header() {
     return (
         <div id="header">
         <div id="logo">
           <div id="logo_text">
+       
+         
+   
+             
             {/* class="logo_colour", allows you to change the colour of the text */}
             <h1><a href="index.html">Home<span className="logo_colour">Medic</span></a></h1>
             <h2>We connect you to your desired doctor at your doorstep</h2>
+              
           </div>
         </div>
         <div id="menubar">
@@ -19,6 +25,8 @@ import{Link} from 'react-router-dom';
             <li><a href="login">Login</a></li>
             <li><a href="another_page.html">Doctors</a></li>
             <li><a href="contactus">Contact Us</a></li>
+            <li><a href="patient">Patient Form</a></li>
+           
             
             
           </ul>
