@@ -22,7 +22,7 @@ export class patient extends Component {
      p_address:'',
      p_phone:'',
      p_email:'',
-     p_sex:''
+     p_sex:'',
  
  }
     }
