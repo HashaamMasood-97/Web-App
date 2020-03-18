@@ -22,7 +22,7 @@ export class patient extends Component {
      p_address:'',
      p_phone:'',
      p_email:'',
-     p_sex:''
+     p_sex:'',
  
  }
     }
@@ -70,14 +70,14 @@ onSubmit(e){
     e.preventDefault(); 
 // code to connect backend 
 const newTodo ={
-p_name: this.state.p_name,
+p_name: this.state.p_namw,
 p_address: this.state.p_address,
 p_phone: this.state.p_phone,
 p_email: this.state.p_email,
 p_sex: this.state.p_sex
 };
 
-axios.post('http://localhost:3500/homemedic/add', newTodo)
+axios.post('http://localhost:3500/homemedic/api/patient/add', newTodo)
 .then(res => console.log(res.data));
 
 this.props.history.push('/');
