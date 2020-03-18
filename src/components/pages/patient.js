@@ -70,7 +70,7 @@ onSubmit(e){
     e.preventDefault(); 
 // code to connect backend 
 const newTodo ={
-p_name: this.state.p_name,
+p_name: this.state.p_namw,
 p_address: this.state.p_address,
 p_phone: this.state.p_phone,
 p_email: this.state.p_email,
