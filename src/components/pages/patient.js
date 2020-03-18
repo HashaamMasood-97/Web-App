@@ -77,7 +77,7 @@ p_email: this.state.p_email,
 p_sex: this.state.p_sex
 };
 
-axios.post('http://localhost:3500/homemedic/add', newTodo)
+axios.post('http://localhost:3500/homemedic/api/patient/add', newTodo)
 .then(res => console.log(res.data));
 
 this.props.history.push('/');

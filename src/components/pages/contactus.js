@@ -72,7 +72,7 @@ c_message: this.state.c_message
 
 };
 
-axios.post('http://localhost:3500/homemedic/add', newodo)
+axios.post('http://localhost:3500/homemedic/api/contact/add', newodo)
 .then(res => console.log(res.data));
 
 this.props.history.push('/');
