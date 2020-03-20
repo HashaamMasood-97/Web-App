@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 export default function login() {
     
@@ -9,10 +11,11 @@ export default function login() {
   return (
         <div className="wrapper fadeInDown">
         <div id="formContent">
-        
+      
           {/* Tabs Titles */}
           <h2 className="active"> Sign In </h2>
-          <h2 className="inactive underlineHover">Sign Up </h2>
+         
+          <h2 className="inactive underlineHover"><a href="signup">Sign Up</a> </h2>
         
          {/*   Icon 
           <div className="fadeIn first">
@@ -23,7 +26,7 @@ export default function login() {
           <form>
             <input type="text" id="login" className="fadeIn second" name="login" placeholder="Username" />
             <input type="text" id="password" className="fadeIn third" name="login" placeholder="Password" />
-            <input type="submit" className="fadeIn fourth" defaultValue="Log In" />
+            <input type="submit" value="Sign In" className="fadeIn fourth" defaultValue="Log In" />
           </form>
         
           {/* Remind Passowrd */}

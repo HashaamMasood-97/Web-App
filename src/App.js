@@ -7,6 +7,7 @@ import contactus from './components/pages/contactus';
 import './App.css';
 import home from './components/home';
 import patient from './components/pages/patient';
+import Signup from './components/pages/Signup';
 
 
 class App extends Component {
@@ -22,6 +23,8 @@ class App extends Component {
      <Route path ="/login" component= {login} />
      <Route path ="/contactus" component= {contactus} />
      <Route path ="/patient" component= {patient} />
+     <Route path ="/signup" component= {Signup} />
+    
     
 
    
