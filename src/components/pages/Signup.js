@@ -19,6 +19,11 @@ export class Signup extends Component {
       signUpLastName:'',
       signUpEmail: '',
       signUpPassword: '',
+      contact:'',
+      gender:''
+
+
+
      
     };
 
@@ -29,6 +34,8 @@ export class Signup extends Component {
     this.onTextboxChangeSignUpPassword = this.onTextboxChangeSignUpPassword.bind(this);
     this.onTextboxChangeSignUpFirstName=this.onTextboxChangeSignUpFirstName.bind(this);  
     this.onTextboxChangeSignUpLastName=this.onTextboxChangeSignUpLastName.bind(this);
+    this.onTextboxChangeContact=this.onTextboxChangeContact.bind(this);
+    this.onTextboxChangeGender=this.onTextboxChangeGender.bind(this);
     this.onSignUp = this.onSignUp.bind(this);
   
   }
@@ -83,6 +90,18 @@ export class Signup extends Component {
       signUpLastName: event.target.value,
     });
   }
+
+  onTextboxChangeContact(event) {
+    this.setState({
+      contact: event.target.value,
+    });
+  }
+
+  onTextboxChangeGender(event) {
+    this.setState({
+      gender: event.target.value,
+    });
+  }
   
   
   onSignUp() {
@@ -92,6 +111,8 @@ export class Signup extends Component {
       signUpLastName,
       signUpEmail,
       signUpPassword,
+      gender,
+      contact,
     } = this.state;
     this.setState({
       isLoading: true,
@@ -107,6 +128,8 @@ export class Signup extends Component {
         lastName: signUpLastName,
         email: signUpEmail,
         password: signUpPassword,
+        contact: contact,
+        gender: gender
       }),
     }).then(res => res.json())
       .then(json => {
@@ -119,6 +142,8 @@ export class Signup extends Component {
             signUpPassword: '',
             signUpFirstName:'',
             signUpLastName:'',
+            contact:'',
+            gender:''
           });
         } else {
           this.setState({
@@ -141,6 +166,8 @@ export class Signup extends Component {
         signUpEmail,
         signUpPassword,
         signUpError,
+        contact,
+        gender,
       } = this.state;
       if (isLoading) {
         return (<div><p>Loading...</p></div>);
@@ -171,10 +198,46 @@ export class Signup extends Component {
               onChange={this.onTextboxChangeSignUpFirstName} />
               <input type="text" id="lastname" className="fadeIn second" name="signup" placeholder="Last Name"  value={signUpLastName}
               onChange={this.onTextboxChangeSignUpLastName} />
+                <input type="text" id="phone" className="fadeIn third" name="signup" placeholder="Contact Number"  value={contact}
+              onChange={this.onTextboxChangeContact}/>
               <input type="text" id="email" className="fadeIn third" name="signup" placeholder=" E-mail address"  value={signUpEmail}
               onChange={this.onTextboxChangeSignUpEmail}/>
               <input type="text" id="password" className="fadeIn third" name="signup" placeholder="Password"  value={signUpPassword}
               onChange={this.onTextboxChangeSignUpPassword}/>
+             
+
+                         <div className="form-group">
+                        <p  style={{marginTop: 10 }}>GENDER</p>
+                        <div className="form-check form-check-inline">
+                           <input className="form-check-input"
+                    type="radio"
+                    name="priorityOption"
+                    id="priorityLow"
+                    value="Male"
+                    checked={this.state.gender=='Male'}
+                    onChange={this.onTextboxChangeGender}
+                    />
+             <label className="form-check-label">       Male     </label>
+
+                    
+
+                  
+                 <input className="form-check-input"
+                    type="radio"
+                    name="priorityOption"
+                    id="priorityMedium"
+                    value="Female"
+                    checked={this.state.gender=='Female'}
+                    onChange={this.onTextboxChangeGender}
+                    />
+             <label className="form-check-label" >   Female   </label>
+
+                  </div>   
+
+                   </div>
+
+                    
+                           <br/>
               <input type="submit" value="Sign Up" className="fadeIn fourth" defaultValue="Sign Up" onClick={this.onSignUp}/>
             </form>
           
