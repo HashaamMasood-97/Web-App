@@ -200,16 +200,16 @@ export class Signup extends Component {
               onChange={this.onTextboxChangeSignUpLastName} />
                 <input type="text" id="phone" className="fadeIn third" name="signup" placeholder="Contact Number"  value={contact}
               onChange={this.onTextboxChangeContact}/>
-              <input type="text" id="email" className="fadeIn third" name="signup" placeholder=" E-mail address"  value={signUpEmail}
+              <input type="email" id="email" className="fadeIn third" name="signup" placeholder=" E-mail address"  value={signUpEmail}
               onChange={this.onTextboxChangeSignUpEmail}/>
-              <input type="text" id="password" className="fadeIn third" name="signup" placeholder="Password"  value={signUpPassword}
+              <input type="password" id="password" className="fadeIn third" name="signup" placeholder="Password"  value={signUpPassword}
               onChange={this.onTextboxChangeSignUpPassword}/>
              
 
-                         <div className="form-group">
-                        <p  style={{marginTop: 10 }}>GENDER</p>
-                        <div className="form-check form-check-inline">
-                           <input className="form-check-input"
+                    <div className="form-group">
+                    <p  style={{marginTop: 10 }}>GENDER</p>
+                    <div className="form-check form-check-inline">
+                    <input className="form-check-input"
                     type="radio"
                     name="priorityOption"
                     id="priorityLow"

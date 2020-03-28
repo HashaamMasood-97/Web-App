@@ -173,7 +173,7 @@ export class login extends Component {
         <form>
           <input type="text" id="login" className="fadeIn second" name="login" placeholder="Username"    value={signInEmail}
               onChange={this.onTextboxChangeSignInEmail} />
-          <input type="text" id="password" className="fadeIn third" name="login" placeholder="Password"   value={signInPassword}
+          <input type="password" id="password" className="fadeIn third" name="login" placeholder="Password"   value={signInPassword}
               onChange={this.onTextboxChangeSignInPassword} />
           <input type="submit" value="Sign In" className="fadeIn fourth" defaultValue="Log In"  onClick={this.onSignIn} />
         </form>
