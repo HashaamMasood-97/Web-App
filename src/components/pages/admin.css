@@ -38,12 +38,7 @@
 
 
 
-.fill a{
-               
-  
-    text-decoration: none;
-    color: white;
-}
+
 .fill h2{
                
     margin-top: 75px;
@@ -69,18 +64,20 @@
         border: 1px solid black;
         text-align: center;
         background-color: #E7746F;   
+        color: white;
        }    
        
        
        .box:hover{
         background-color: black;
+        
   
     }   
+    h2:hover{
+        color: #E77;
+    }
 
-            a:hover{
-               color: #E7746F;
-               background-color: black;
-           }
+           
 
        #aaa{
          width: 420px;
