@@ -10,14 +10,9 @@ import './admin.css';
        <td>{props.user.firstName}</td>
        <td>{props.user.lastName}</td>
        <td>{props.user.email}</td>
- 
        <td>{props.user.contact}</td>
-       <td>{props.user.gender}</td>
-      
+       <td>{props.user.gender}</td>   
        <td>{props.user.signUpDate}</td>
-     
-
-
 
    </tr>
 
@@ -63,8 +58,7 @@ UserList(){
                          <tr>
                              <th>First Name</th>
                              <th>Last Name</th>
-                             <th>E-mail</th>
-                          
+                             <th>E-mail</th>                        
                              <th>Contact Number</th>
                              <th>Gender</th>
                              <th>User Joined</th>

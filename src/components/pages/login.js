@@ -190,7 +190,8 @@ export class login extends Component {
   return (
     <div>
       <p>Signed in</p>
-      <button onClick={this.logout}>logout</button>
+      <button onClick={this.logout}>logout</button> <br/>
+      <button> <a href="bookingroute"> next</a> </button>
       
     </div>
   );

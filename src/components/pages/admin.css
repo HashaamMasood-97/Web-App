@@ -43,9 +43,15 @@
                
     margin-top: 75px;
     text-decoration: none;
-    color: white;
+    color : white;
+   
 }
 
+.fill h2:hover{
+
+    color: #E77;
+
+}
 
 .box{
     
@@ -64,7 +70,7 @@
         border: 1px solid black;
         text-align: center;
         background-color: #E7746F;   
-        color: white;
+        
        }    
        
        
@@ -73,9 +79,7 @@
         
   
     }   
-    h2:hover{
-        color: #E77;
-    }
+  
 
            
 
@@ -121,7 +125,7 @@
 
          #box3:hover{
              background-color: black;
-             color: white;
+             color: #E77;
          }   
             
          .box1:hover{
@@ -131,7 +135,7 @@
             
         #box2:hover{
             background-color: black;
-            color: white;
+            
         }   
            
         

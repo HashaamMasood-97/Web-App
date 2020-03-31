@@ -42,6 +42,9 @@ onChangeCname(e){
 onChangeCaddress(e){
   this.setState({
       c_address: e.target.value
+   
+
+     
   });
 }
 
@@ -57,12 +60,14 @@ onChangeCmessage(e){
   this.setState({
       c_message: e.target.value
   });
+  
 }
 
 
 
 onSubmit(e){
   e.preventDefault(); 
+  
 // code to connect backend 
 const newodo ={
 c_name: this.state.c_name,
@@ -71,6 +76,8 @@ c_phone: this.state.c_phone,
 c_message: this.state.c_message
 
 };
+
+
 
 axios.post('http://localhost:3500/homemedic/api/contact/add', newodo)
 .then(res => console.log(res.data));
@@ -127,6 +134,7 @@ this.props.history.push('/');
                         </span>
                       </div>
                       <form className="contact100-form validate-form"  onSubmit={this.onSubmit}>
+                      <div class="msg"></div>
                         <div className="wrap-input100 validate-input" data-validate="Name is required">
                           <span className="label-input100">Full Name:</span>
                           <input className="input100"

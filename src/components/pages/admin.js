@@ -25,7 +25,7 @@ export class admin extends Component {
             </a>
             <a href="./doctorretrieval">
              <div class="box1"   style={{display: "inline-block"}}>
-            <h2>DOCTORS</h2> <br/>
+            <h2  >DOCTORS</h2> <br/>
             </div>
             </a>
             </div>
