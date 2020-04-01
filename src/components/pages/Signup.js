@@ -204,6 +204,7 @@ export class Signup extends Component {
               onChange={this.onTextboxChangeSignUpEmail}/>
               <input type="password" id="password" className="fadeIn third" name="signup" placeholder="Password"  value={signUpPassword}
               onChange={this.onTextboxChangeSignUpPassword}/>
+              
              
 
                     <div className="form-group">

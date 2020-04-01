@@ -36,7 +36,7 @@ import {
         specialisation:'',
         workexp:'',
         email:'',
-  
+        picture:'',
   
   
        
@@ -57,6 +57,7 @@ import {
       this.onTextboxChangeQualification=this.onTextboxChangeQualification.bind(this);
       this.onTextboxChangeSpecialisation=this.onTextboxChangeSpecialisation.bind(this);
       this.onTextboxChangeWorkexp=this.onTextboxChangeWorkexp.bind(this);
+      this.onTextboxChangePIC=this.onTextboxChangePIC.bind(this);
       this.onSignUp = this.onSignUp.bind(this);
     
     }
@@ -162,6 +163,11 @@ import {
     
       
       
+      onTextboxChangePIC(event) {
+        this.setState({
+        picture: event.target.value,
+        });
+      }
     
     
     onSignUp() {
@@ -180,6 +186,7 @@ import {
         specialisation,
         workexp,
         email,
+        picture,
       } = this.state;
       this.setState({
         isLoading: true,
@@ -203,6 +210,7 @@ import {
           workexp:workexp,
           specialisation:specialisation,
           nationality:nationality,
+          picture:picture,
 
         }),
       }).then(res => res.json())
@@ -223,7 +231,8 @@ import {
               nationality:'',
               specialisation:'',
               workexp:'',
-              email:''
+              email:'',
+              picture:''
             });
           } else {
             this.setState({
@@ -365,6 +374,11 @@ import {
                     <textarea className="input100" name="work Experience" placeholder="Your Work Experienc..." defaultValue={""} value={this.state.workexp}  onChange={this.onTextboxChangeWorkexp}/>
                     <span className="focus-input100" />
                   </div>
+                {/*  <div className="wrap-input100 validate-input" data-validate="DOB is required">
+                    <span  className="label-input100">Upload  Picture:</span>
+                    <input  className="input100" type="file" name="picture"  value={this.state.picture}  onChange={this.onTextboxChangePIC} />
+                    <span className="focus-input100" />
+            </div>  */}
                   <div className="form-group">
                         <p  style={{marginTop: 10 }}>GENDER</p>
                         <div className="form-check form-check-inline">

@@ -12,15 +12,20 @@ import logo from "./a.jpg";
 
 
  const User= props =>(
-    <div class="card" style={{width: '400' ,display: "inline-block" }} >
-    <img class="card-img-top"  width='200' src={logo} alt="Card image"/>
-    <div class="card-body">
-     
-      <h4 class="card-title"> {props.user.firstName} {props.user.lastName}</h4>
-      <p class="card-text">{props.user.qualification}</p>
-      <p class="card-text">{props.user.specialisation}</p>
-      <a href="#" class="btn btn-primary">BOOK NOW</a>
+    
+    <div class="doc" style={{display: "inline-block" }} >
+   <div className="imgn"  style={{display: "inline-block" }}>
+    <img  width='170' src={logo} alt="Card image"/>
     </div>
+    
+     <div className="right"  >
+      <h4> Dr. {props.user.firstName} {props.user.lastName}</h4>
+      </div>
+      <div className="bot">
+      <p>{props.user.qualification}</p> 
+      <p>{props.user.specialisation}</p>
+      <a href="#" class="btn btn-primary">BOOK NOW</a>
+      </div>
   </div>
 
 
