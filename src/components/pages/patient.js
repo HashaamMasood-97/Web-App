@@ -70,7 +70,7 @@ onSubmit(e){
     e.preventDefault(); 
 // code to connect backend 
 const newTodo ={
-p_name: this.state.p_namw,
+p_name: this.state.p_name,
 p_address: this.state.p_address,
 p_phone: this.state.p_phone,
 p_email: this.state.p_email,
@@ -89,8 +89,21 @@ this.props.history.push('/');
 
     render() {
         return (
-            <div  style={{ textAlign: 'left', paddingLeft: 20}}>
-                <h3 style={{marginTop: 10, textAlign: 'center' }}> Patient Form</h3>
+            <div>
+                  <title>Contact V15</title>
+               
+                
+                  <div className="container-contact100">
+                    <div className="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell={0} data-draggable={1} />
+                    <div className="wrap-contact100">
+                      <div className="contact100-form-title" style={{backgroundImage: 'url(images/bg-01.jpg)'}}>
+                        <span className="contact100-form-title-1">
+                          Patient Form
+                        </span>
+                        <span className="contact100-form-title-2">
+                      
+                        </span>
+                      </div>
                 <form className="contact100-form validate-form" onSubmit={this.onSubmit}>
                 <div className="wrap-input100 validate-input" data-validate="Name is required">
                           <span className="label-input100">Full Name:</span>
@@ -121,7 +134,7 @@ this.props.history.push('/');
                        
                         <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                           <span className="label-input100">Email:</span>
-                          <input className="input100" type="text" name="email" placeholder="Enter email addess" value={this.state.p_address}  onChange={this.onChangePaddress} />
+                          <input className="input100" type="text" name="email" placeholder="Enter email addess" value={this.state.p_email}  onChange={this.onChangePemail} />
                           <span className="focus-input100" />
                         </div>
 
@@ -136,11 +149,11 @@ this.props.history.push('/');
                     checked={this.state.p_sex=='Male'}
                     onChange={this.onChangePsex}
                     />
-             <label className="form-check-label">Male</label>
+             <label className="form-check-label">       Male     </label>
 
-                  </div>   
+                    
 
-                  <div className="form-check form-check-inline">
+                  
                  <input className="form-check-input"
                     type="radio"
                     name="priorityOption"
@@ -149,7 +162,7 @@ this.props.history.push('/');
                     checked={this.state.p_sex=='Female'}
                     onChange={this.onChangePsex}
                     />
-             <label className="form-check-label">Female</label>
+             <label className="form-check-label" >   Female   </label>
 
                   </div>   
 
@@ -165,6 +178,10 @@ this.props.history.push('/');
                    </div>
                </form>   
             </div>
+            </div>
+                  <div id="dropDownSelect1" />
+    
+                </div>
         )
     }
 }

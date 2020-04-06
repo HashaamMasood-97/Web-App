@@ -139,7 +139,7 @@ this.props.history.push('/');
                         </div>
                         <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                           <span className="label-input100">Email:</span>
-                          <input className="input100" type="text" name="email" placeholder="Enter email addess" value={this.state.c_address}  onChange={this.onChangeCaddress} />
+                          <input className="input100" type="email" name="email" placeholder="Enter email addess" value={this.state.c_address}  onChange={this.onChangeCaddress} />
                           <span className="focus-input100" />
                         </div>
                         <div className="wrap-input100 validate-input" data-validate="Phone is required">
