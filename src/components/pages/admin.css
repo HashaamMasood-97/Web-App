@@ -142,12 +142,11 @@
         
         .doc{
            
-            border: 2px solid black;
             width: 400px;
             height: 450px;
             background-color: whitesmoke;
             margin: 20px;
-            border-radius: 10px;
+         
         }
         
         .imgn{
@@ -173,3 +172,43 @@
             height: 200px;
             border: 1px solid black;
         }
+
+        
+        .hey{
+
+            text-align: center;
+            margin-top: 20px;
+            color: black;
+            font-size: 20px;
+        }
+ 
+
+        .bota{
+            margin-top: 40px;
+           
+            
+        }
+
+        .bota h5{
+          font-size: 17px;
+           color: black;
+           margin-left: 15px;
+
+        }
+
+        .bota p{
+            font-size: 14px;
+             color: black;
+             margin-left: 15px;
+  
+          }
+
+
+          .botaa{
+            width: 100%;
+            height: 50px;
+            margin-top: 30px;
+            text-align: center;
+
+          }
+         

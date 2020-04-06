@@ -14,19 +14,26 @@ import logo from "./a.jpg";
  const User= props =>(
     
     <div class="doc" style={{display: "inline-block" }} >
-   <div className="imgn"  style={{display: "inline-block" }}>
-    <img  width='170' src={logo} alt="Card image"/>
-    </div>
-    
-     <div className="right"  >
-      <h4> Dr. {props.user.firstName} {props.user.lastName}</h4>
-      </div>
-      <div className="bot">
-      <p>{props.user.qualification}</p> 
+  
+      <h4 class="hey"> Dr. {props.user.firstName} {props.user.lastName}</h4>
+       
+       <div class="bota">
+      <h5>SPECIALIZATION</h5> 
       <p>{props.user.specialisation}</p>
-      <a href="#" class="btn btn-primary">BOOK NOW</a>
+      <h5>QUALIFICATION</h5> 
+      <p>{props.user.qualification}</p>
+      <h5>EXPERIENCE</h5> 
+      <p>{props.user.workexp}</p>
       </div>
-  </div>
+      <div class="botaa">
+      <Link to= {"/patient/" + props.user._id}> 
+      <input type="submit" value="BOOK NOW" className="btn btn-primary" />
+       </Link> 
+     
+
+      </div>   
+         </div>
+
 
 
 

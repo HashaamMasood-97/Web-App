@@ -25,7 +25,6 @@ import{Link} from 'react-router-dom';
             <li><a href="login">Sign In/Up</a></li>
             <li><a href="doctor">Doctors</a></li>
             <li><a href="contactus">Contact Us</a></li>
-            <li><a href="patient">Patient Form</a></li>
             <li><a href="admin">Admin</a></li>
            
             
