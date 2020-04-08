@@ -37,6 +37,7 @@ class App extends Component {
      <Route path ="/doctorretrieval" component= {DoctorRetrieval} />
      <Route path ="/contactretrieval" component= {ContactusRetrieval} /> 
      <Route path ="/bookingroute" component= {BookingRoute} /> 
+     
    
     </div>   
     </div>

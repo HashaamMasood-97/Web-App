@@ -91,11 +91,8 @@ this.props.history.push('/');
         return (
             <div>
                   <title>Contact V15</title>
-                  <h1>Image to PDF</h1>
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="avatar"></input>
-        <button type="submit">Convert</button>
-    </form>
+                
+   
                 
                   <div className="container-contact100">
                     <div className="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell={0} data-draggable={1} />
