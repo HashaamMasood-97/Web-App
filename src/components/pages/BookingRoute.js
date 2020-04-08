@@ -26,7 +26,7 @@ import logo from "./a.jpg";
       <p>{props.user.workexp}</p>
       </div>
       <div class="botaa">
-      <Link to= {"/patient/" + props.user._id}> 
+      <Link to= {"/patient/" + props.user.id}> 
       <input type="submit" value="BOOK NOW" className="btn btn-primary" />
        </Link> 
      

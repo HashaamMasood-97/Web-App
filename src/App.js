@@ -13,7 +13,10 @@ import doctor from './components/pages/doctor';
 import UserRetrieval from './components/pages/UserRetrieval';
 import DoctorRetrieval from './components/pages/DoctorRetrieval';
 import ContactusRetrieval from './components/pages/ContactusRetrieval';
+import patientRetrieval from './components/pages/patientRetrieval';
 import BookingRoute from './components/pages/BookingRoute';
+import DoctorSignUp from './components/pages/DoctorSignUp';
+import DoctorLogin from './components/pages/DoctorLogin';
 
 
 
@@ -36,7 +39,10 @@ class App extends Component {
      <Route path ="/userretrieval" component= {UserRetrieval} />
      <Route path ="/doctorretrieval" component= {DoctorRetrieval} />
      <Route path ="/contactretrieval" component= {ContactusRetrieval} /> 
+     <Route path ="/patientretrieval" component= {patientRetrieval} /> 
      <Route path ="/bookingroute" component= {BookingRoute} /> 
+     <Route path ="/doctorsignup" component= {DoctorSignUp} /> 
+     <Route path ="/doctorlogin" component= {DoctorLogin} /> 
      
    
     </div>   

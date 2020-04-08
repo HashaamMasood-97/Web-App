@@ -34,7 +34,7 @@ export class admin extends Component {
             <h2>MESSAGES</h2> <br/>
             </div>
             </a>
-            <a>
+            <a  href="./patientretrieval">
              <div id="box3"  style={{display: "inline-block"}}>
             <h2>BOOKINGS</h2> <br/>
             </div>

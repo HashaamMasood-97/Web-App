@@ -187,14 +187,15 @@ export class login extends Component {
     </div>
   );
   }
-  return (
-    <div>
+ return (
+      <div>
       <p>Signed in</p>
       <button onClick={this.logout}>logout</button> <br/>
       <button> <a href="bookingroute"> next</a> </button>
       
-    </div>
-  );
+    </div> 
+  
+  ); 
 }
 }
 export default login

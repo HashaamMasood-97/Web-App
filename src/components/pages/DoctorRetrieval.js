@@ -18,10 +18,6 @@ import './admin.css';
        <td>{props.user.workexp}</td>
        <td>{props.user.specialisation}</td>
        <td>{props.user.signUpDate}</td>
-     
-
-
-
    </tr>
 
 
@@ -46,6 +42,7 @@ export class DoctorRetrieval extends Component {
         }
         )
     }
+    
 
     
 DoctorList(){

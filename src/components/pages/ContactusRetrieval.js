@@ -57,7 +57,7 @@ MessageList(){
     render() {
         return (
             <div id="div23">
-            <h3  id="abcdef"> MEMBERS </h3>
+            <h3  id="abcdef"> Messages </h3>
             <table className="school" style={{marginTop:20}} >
                  <thead>
                          <tr>
