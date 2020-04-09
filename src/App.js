@@ -17,6 +17,7 @@ import patientRetrieval from './components/pages/patientRetrieval';
 import BookingRoute from './components/pages/BookingRoute';
 import DoctorSignUp from './components/pages/DoctorSignUp';
 import DoctorLogin from './components/pages/DoctorLogin';
+import extra from './components/pages/extra';
 
 
 
@@ -43,6 +44,8 @@ class App extends Component {
      <Route path ="/bookingroute" component= {BookingRoute} /> 
      <Route path ="/doctorsignup" component= {DoctorSignUp} /> 
      <Route path ="/doctorlogin" component= {DoctorLogin} /> 
+     <Route path ="/extra" component= {extra} /> 
+     
      
    
     </div>   
