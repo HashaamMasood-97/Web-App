@@ -7,6 +7,8 @@ import './admin.css';
 
  const User= props =>(
    <tr>
+       <td>{props.user.firstName} {props.user.lastName}</td>
+       <td>{props.user.specialisation}</td>
        <td>{props.user.p_name}</td>
        <td>{props.user.p_phone}</td>
        <td>{props.user.p_email}</td>
@@ -66,7 +68,9 @@ PatientList(){
             <table className="school" style={{marginTop:20}} >
                  <thead>
                          <tr>
-                             <th>User Name</th>
+                            <th>Doctor Name</th>
+                            <th>Specialisation</th>                      
+                             <th>Patient Name</th>
                              <th>Contact Number</th>
                              <th>E-mail</th>
                              <th>Address</th>

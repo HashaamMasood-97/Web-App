@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom';
+import './admin.css';
+import axios from 'axios';
 
 import {
   setInStorage,
@@ -6,9 +9,12 @@ import {
 } from './storage';
 
 
+
+
 export class DoctorLogin extends Component {
   constructor(props) {
     super(props);
+    this.state={homemedic: []};
     
     
     this.state = {
@@ -133,6 +139,15 @@ export class DoctorLogin extends Component {
   }
 
 
+
+
+
+
+
+
+
+
+
   render() {
     const {
       isLoading,
@@ -192,9 +207,9 @@ export class DoctorLogin extends Component {
       <p>Signed in</p>
       <button onClick={this.logout}>logout</button> <br/>
 
-      
-    </div> 
+    </div>     
   
+     
   ); 
 }
 }

@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
+import './admin.css';
 
      
      
+
 
 
 
@@ -21,6 +24,7 @@ export class patient extends Component {
         this.onChangeHistory=this.onChangeHistory.bind(this);
         this.onChangeDOB=this.onChangeDOB.bind(this);
         this.onChangeStatus=this.onChangeStatus.bind(this);
+      
         this.onSubmit=this.onSubmit.bind(this);
  
 
@@ -37,12 +41,40 @@ export class patient extends Component {
      DOB:'',
      history:'',
      details:'',
-     status:''
+     status:'',
+     firstName:'',
+     lastName:'',
+     specialisation:'',
+     
+   
  
  }
     }
-
  
+ 
+    componentDidMount(){                                                            
+      axios.get('http://localhost:3500/homemedic/api/doctor/signup/'+this.props.match.params.id)
+           .then(response=>{
+              this.setState({
+                firstName: response.data.firstName,
+                lastName: response.data.lastName,
+                specialisation: response.data.specialisation,
+                _id: response.data._id
+
+              })
+
+           })
+       .catch(function(error) {
+          console.log(error)
+          
+       }
+       )    
+  } 
+     
+   
+
+
+     
     
 
     onChangeStatus(e){
@@ -118,7 +150,11 @@ p_sex: this.state.p_sex,
 details: this.state.details,
 medhistory: this.state.medhistory,
 DOB: this.state.DOB,
-status: this.state.status
+status: this.state.status,
+firstName:this.state.firstName,
+lastName:this.state.lastName,
+specialisation:this.state.specialisation
+
 };
 
 axios.post('http://localhost:3500/homemedic/api/patient/add', newTodo)
@@ -146,7 +182,21 @@ this.props.history.push('/');
                       
                         </span>
                       </div>
+              
+       
                 <form className="contact100-form validate-form" onSubmit={this.onSubmit}>
+
+                  <div id='hashaam'>
+                 <p> Dr. {this.state.firstName}
+                  {this.state.lastName}  
+                  <br/>
+                 
+                  {this.state.specialisation}
+                  </p>
+                  </div>
+                               
+             
+             
                 <div className="wrap-input100 validate-input" data-validate="Name is required">
                           <span className="label-input100">Full Name:</span>
                           <input className="input100"

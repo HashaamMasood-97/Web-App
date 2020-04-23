@@ -17,6 +17,7 @@ import patientRetrieval from './components/pages/patientRetrieval';
 import BookingRoute from './components/pages/BookingRoute';
 import DoctorSignUp from './components/pages/DoctorSignUp';
 import DoctorLogin from './components/pages/DoctorLogin';
+//import userprofile from './components/pages/userprofile.html';
 import extra from './components/pages/extra';
 
 
@@ -33,7 +34,7 @@ class App extends Component {
      <Route path ="/about" component= {About} />
      <Route path ="/login" component= {login} />
      <Route path ="/contactus" component= {contactus} />
-     <Route path ="/patient" component= {patient} />
+     <Route path ="/patient/:id" component= {patient} />
      <Route path ="/signup" component= {Signup} />
      <Route path ="/admin" component= {admin} />
      <Route path ="/doctor" component= {doctor} />
@@ -44,6 +45,7 @@ class App extends Component {
      <Route path ="/bookingroute" component= {BookingRoute} /> 
      <Route path ="/doctorsignup" component= {DoctorSignUp} /> 
      <Route path ="/doctorlogin" component= {DoctorLogin} /> 
+     {/*<Route path ="/userprofile" component= {userprofile} /> */} 
      <Route path ="/extra" component= {extra} /> 
      
      

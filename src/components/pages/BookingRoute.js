@@ -24,14 +24,16 @@ import logo from "./a.jpg";
       <p>{props.user.qualification}</p>
       <h5>EXPERIENCE</h5> 
       <p>{props.user.workexp}</p>
-      </div>
-      <div class="botaa">
-      <Link to= {"/patient/" + props.user.id}> 
-      <input type="submit" value="BOOK NOW" className="btn btn-primary" />
-       </Link> 
-     
+      
 
-      </div>   
+      </div>
+      
+      <div class="botaa"> 
+      <Link to= {"/patient/" +  props.user._id}> 
+  <input type="submit" value="BOOK NOW" className="btn btn-primary" /> 
+  </Link>  
+      </div> 
+    
          </div>
 
 
@@ -48,7 +50,7 @@ export class BookingRoute extends Component {
 
     constructor(props) {
         super(props);
-        this.state={homemedic: []};
+       this.state={homemedic: []};
     }
 
 
@@ -63,6 +65,11 @@ export class BookingRoute extends Component {
         )
     }
 
+
+
+    
+  
+   
     
 DoctorList(){
     return this.state.homemedic.map(function(currentUser, i){

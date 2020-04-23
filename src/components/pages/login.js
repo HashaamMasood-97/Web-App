@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import axios from 'axios';
 
 import {
   setInStorage,
@@ -6,9 +9,13 @@ import {
 } from './storage';
 
 
+
+
+
 export class login extends Component {
   constructor(props) {
     super(props);
+    
     
     
     this.state = {
@@ -17,15 +24,27 @@ export class login extends Component {
       signUpError: '',
       signInError: '',
       signInEmail: '',
+      firstName:'',
+    
      
     };
+
     this.onTextboxChangeSignInEmail = this.onTextboxChangeSignInEmail.bind(this);
     this.onTextboxChangeSignInPassword = this.onTextboxChangeSignInPassword.bind(this);
     this.onSignIn = this.onSignIn.bind(this);
     this.logout = this.logout.bind(this);
   }
+
+
+
+  
+
+
+
+
   
   componentDidMount() {
+
     const obj = getFromStorage('the_main_app');
     if (obj && obj.token) {
       const { token } = obj;
@@ -44,6 +63,8 @@ export class login extends Component {
             });
           }
         });
+        
+        
     } else {
       this.setState({
         isLoading: false,
@@ -62,11 +83,13 @@ export class login extends Component {
       signInPassword: event.target.value,
     });
   }
+
   onSignIn() {
     // Grab state
     const {
       signInEmail,
       signInPassword,
+      
     } = this.state;
     this.setState({
       isLoading: true,
@@ -80,8 +103,10 @@ export class login extends Component {
       body: JSON.stringify({
         email: signInEmail,
         password: signInPassword,
+        
       }),
     }).then(res => res.json())
+    
       .then(json => {
         console.log('json', json);
         if (json.success) {
@@ -91,6 +116,7 @@ export class login extends Component {
             isLoading: false,
             signInPassword: '',
             signInEmail: '',
+      
             token: json.token,
           });
         } else {
@@ -99,11 +125,33 @@ export class login extends Component {
             isLoading: false,
           });
         }
-      });
+     
+      }) 
+    
   }
 
+/* getPosts =() =>{
+  fetch('http://localhost:3500/homemedic/api/account/signup/get')
+      .then((res) => res.json())
+      .then((data) => {
+        let output = '<h2 class="mb-4">Posts</h2>';
+        data.forEach(function(post){
+          output += `
+            <div class="card card-body mb-3">
+              <h3> DR.${post.firstName}</h3>
+              <p>${post.lastName}</p>
+              <p>${post.contact}</p>
+            
+            </div>
+          `;
+        });
+        document.getElementById('output').innerHTML =output;
+      })
+    } 
+  
+ } */
 
-  logout() {
+ logout() {
     this.setState({
       isLoading: true,
     });
@@ -132,6 +180,10 @@ export class login extends Component {
     }
   }
 
+ 
+  
+
+
 
   render() {
     const {
@@ -140,6 +192,7 @@ export class login extends Component {
       signInError,
       signInEmail,
       signInPassword,
+ 
      
     } = this.state;
     if (isLoading) {
@@ -175,7 +228,8 @@ export class login extends Component {
               onChange={this.onTextboxChangeSignInEmail} />
           <input type="password" id="password" className="fadeIn third" name="login" placeholder="Password"   value={signInPassword}
               onChange={this.onTextboxChangeSignInPassword} />
-          <input type="submit" value="Sign In" className="fadeIn fourth" defaultValue="Log In"  onClick={this.onSignIn} />
+         
+          <input type="submit" value="Sign In" className="fadeIn fourth" defaultValue="Log In"    onClick={this.onSignIn}     />
         </form>
       
         {/* Remind Passowrd */}
@@ -188,13 +242,24 @@ export class login extends Component {
   );
   }
  return (
-      <div>
+     <div>
       <p>Signed in</p>
       <button onClick={this.logout}>logout</button> <br/>
-      <button> <a href="bookingroute"> next</a> </button>
+      <button> <a href="bookingroute"> next</a> </button> <br/>
+      <button> <a href="http://127.0.0.1:5501/src/components/pages/userprofile.html"> next3</a> </button>
       
-    </div> 
-  
+      
+      
+      
+ 
+   {/*   <div id='output'>  
+      {this.getPosts()}
+    </div>  */} 
+    </div>
+    
+         
+   //<Redirect to="/userinfo"/>
+
   ); 
 }
 }

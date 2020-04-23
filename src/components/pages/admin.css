@@ -211,4 +211,28 @@
             text-align: center;
 
           }
+
+
+          #hashaam{  
+          
+             margin-top: -30px;           
+            margin-bottom: 10px;
+            
+        }
+
+          #hashaam p{ 
+              width: 400px;             
+              font-size: large;
+          }
          
+          #outputtt {
+            width: 300px;
+            height: 200px;
+            }
+            #inputtt {
+            display: block;
+            width: 300px;
+            }
+            #send-buttonnn {
+            width: 300px;
+            }

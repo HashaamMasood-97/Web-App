@@ -33,7 +33,7 @@ export class DoctorRetrieval extends Component {
 
 
     componentDidMount(){
-        axios.get('http://localhost:3500/homemedic/api/doctor/signup/get')
+        axios.get('http://localhost:3500/homemedic/api/doctor/signup/get/')
         .then(response => {
             this.setState({homemedic: response.data});
         })
