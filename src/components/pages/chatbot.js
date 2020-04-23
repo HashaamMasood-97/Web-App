@@ -56,7 +56,8 @@ export default function chatbot() {
     }
 
     return (
-        <div>
+        <div id="chatbot">
+            <h1>Chatbot</h1>
             <textarea id="outputtt" disabled="disabled"></textarea>
             <input id="inputtt" autofocus />
             <button id="send-buttonnn">Send</button>

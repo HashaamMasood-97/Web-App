@@ -227,7 +227,7 @@
          
           #outputtt {
             width: 300px;
-            height: 200px;
+            height: 300px;
             }
             #inputtt {
             display: block;
@@ -236,3 +236,11 @@
             #send-buttonnn {
             width: 300px;
             }
+
+            #chatbot{
+                 text-align: center;
+                width: 250px;
+                margin: auto;
+            }
+
+           
