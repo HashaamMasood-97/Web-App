@@ -29,12 +29,11 @@ import logo from "./a.jpg";
       </div>
       
       <div class="botaa"> 
-      <Link to= {"/patient/" +  props.user._id}> 
-  <input type="submit" value="BOOK NOW" className="btn btn-primary" /> 
-  </Link>  
-      </div> 
-    
-         </div>
+        <Link to= {"/patient/" +  props.user._id}> 
+                <input type="submit" value="BOOK NOW" className="btn btn-primary" /> 
+        </Link>  
+       </div> 
+     </div>           
 
 
 
@@ -51,7 +50,12 @@ export class BookingRoute extends Component {
     constructor(props) {
         super(props);
        this.state={homemedic: []};
+
+
+      
     }
+
+   
 
 
     componentDidMount(){
@@ -65,7 +69,11 @@ export class BookingRoute extends Component {
         )
     }
 
-
+onChangeSearch=(e)=>{
+    this.setState({
+        search: e.taget.value
+    });
+}
 
     
   
@@ -81,14 +89,20 @@ DoctorList(){
 
 
     render() {
+ 
         return (
+           <div> 
+      
+           <input label="Search Doctor" icon="search" onChange={this.onChangeSearch}/>
             <div >
+         
                           
                            {this.DoctorList()}
 
                  
                 
             
+           </div>
            </div>
         )
     }

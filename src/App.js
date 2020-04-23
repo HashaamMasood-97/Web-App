@@ -17,7 +17,7 @@ import patientRetrieval from './components/pages/patientRetrieval';
 import BookingRoute from './components/pages/BookingRoute';
 import DoctorSignUp from './components/pages/DoctorSignUp';
 import DoctorLogin from './components/pages/DoctorLogin';
-//import userprofile from './components/pages/userprofile.html';
+import chatbot from './components/pages/chatbot';
 import extra from './components/pages/extra';
 
 
@@ -45,7 +45,7 @@ class App extends Component {
      <Route path ="/bookingroute" component= {BookingRoute} /> 
      <Route path ="/doctorsignup" component= {DoctorSignUp} /> 
      <Route path ="/doctorlogin" component= {DoctorLogin} /> 
-     {/*<Route path ="/userprofile" component= {userprofile} /> */} 
+    <Route path ="/chatbot" component= {chatbot} /> */} 
      <Route path ="/extra" component= {extra} /> 
      
      

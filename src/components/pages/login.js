@@ -245,8 +245,8 @@ export class login extends Component {
      <div>
       <p>Signed in</p>
       <button onClick={this.logout}>logout</button> <br/>
-      <button> <a href="bookingroute"> next</a> </button> <br/>
-      <button> <a href="http://127.0.0.1:5501/src/components/pages/userprofile.html"> next3</a> </button>
+      <button> <a href="bookingroute"> Book Doctor</a> </button> <br/>
+      <button>   <a href="chatbot">Chatbot</a> </button>
       
       
       
