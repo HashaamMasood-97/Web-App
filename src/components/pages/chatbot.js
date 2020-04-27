@@ -6,14 +6,20 @@ export default function chatbot() {
     const outputEl = document.querySelector('#outputtt')
     const inputEl = document.querySelector('#inputtt')
     const sendButton = document.querySelector('#send-buttonnn')
+  
+
+ 
     
      
     
     const onSubmit = e => {
         const message = inputEl.value
+
         inputEl.value = ''
+        
         outputEl.value += `> ${message}\n`
-      
+        
+
         setTimeout(() => {
           outputEl.value += `${messages(message)}\n`
           }, 300)
@@ -26,7 +32,7 @@ export default function chatbot() {
         switch (message) {
           case 'hello':
           case 'hi':
-          return 'Hello!'
+          return 'Hello!' 
           case 'bye':
           case 'goodbye':
           return 'See ya!'
@@ -37,8 +43,11 @@ export default function chatbot() {
           if (message.includes('your name')) return 'My name is Hue Maan.'
           if (message.includes('your age')) return 'I was born today!'
           if (message.includes('time')) return 'Time? I guess its ' + 
-          +  Date.now().toString()
-          return ''
+          +   Date.now().toString()
+          if (message.includes('good')) return 'Great. How may I assisst you now?'
+          if (message.includes('bad')) return 'Do not worry we will take care of your health.\nSelect your symptoms from the following:\nsore throat || fever || cold' 
+          if (message.includes('fever')) return 'you should book our general physician'
+          return 'bad input'
           }
           }
         }  
@@ -58,7 +67,7 @@ export default function chatbot() {
     return (
         <div id="chatbot">
             <h1>Chatbot</h1>
-            <textarea id="outputtt" disabled="disabled"></textarea>
+            <textarea id="outputtt" disabled="disabled">> Hi, How are you feeling today?       (Good or bad)                           </textarea>
             <input id="inputtt" autofocus />
             <button id="send-buttonnn">Send</button>
         </div>

@@ -228,19 +228,57 @@
           #outputtt {
             width: 300px;
             height: 300px;
+            background-color: #E77;
+            color: white;
             }
             #inputtt {
             display: block;
             width: 300px;
             }
             #send-buttonnn {
+            border-radius: 5px;
             width: 300px;
+            height: 30px;
+            background-color: #E77 ;
             }
 
             #chatbot{
-                 text-align: center;
-                width: 250px;
+               
+                border: 1px solid black; 
+                text-align: center;
+                width: 300px;
                 margin: auto;
+                margin-top: 50px;
+                background-color: #E77;
+               
+                
             }
 
+            #chatbot h1{
+                color: black;
+            }
+
+
+
+            #news{
+                border-radius: 5px;
+                width: 300px;
+                height: 200px;
+                background-color: #E77;
+                margin: auto;
+                margin-top: 100px;
+                text-align: center;
+                border-collapse: initial;
+               
+                
+            }
+
+
+            #news h1{
+                color: black;
+                
+            }
+            #news button{
+                margin-top: 30px;
+            }
            

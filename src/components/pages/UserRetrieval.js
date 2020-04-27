@@ -7,12 +7,12 @@ import './admin.css';
 
  const User= props =>(
    <tr>
-       <td>{props.user.firstName}</td>
-       <td>{props.user.lastName}</td>
+       <td>{props.user.first_name}</td>
+       <td>{props.user.last_name}</td>
        <td>{props.user.email}</td>
-       <td>{props.user.contact}</td>
+       <td>{props.user.phone}</td>
        <td>{props.user.gender}</td>   
-       <td>{props.user.signUpDate}</td>
+       <td>{props.user.date}</td>
 
    </tr>
 
@@ -29,7 +29,7 @@ export class UserRetrieval extends Component {
 
 
     componentDidMount(){
-        axios.get('http://localhost:3500/homemedic/api/account/signup/get')
+        axios.get('http://localhost:3500/homemedic/register/get')
         .then(response => {
             this.setState({homemedic: response.data});
         })

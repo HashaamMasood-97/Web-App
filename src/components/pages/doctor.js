@@ -29,11 +29,11 @@ export class admin extends Component {
             </div>
             </a>
             
-            <a href="./extra"  >
+            {/*<a href="./extra"  >
              <div class="box1"   style={{display: "inline-block"}}>
             <h2>Extra</h2> <br/>
             </div>
-            </a>
+            </a> */}
             </div>
            
 
