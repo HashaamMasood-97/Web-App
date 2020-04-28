@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { getProfile } from './UserFunctions'
+import { getProfile, getAppointment } from './UserFunctions'
 import {Link} from 'react-router-dom';
 import './admin.css';
+import axios from 'axios';
 
 class Profile extends Component {
   constructor() {
@@ -15,6 +16,8 @@ class Profile extends Component {
       email: '',
       gender:'',
       phone:'',
+      user_id:'',
+      firstName:'',
       errors: {}
     }
   }
@@ -26,9 +29,22 @@ class Profile extends Component {
   }  
 
   
-    componentDidMount() {
+  
+
+
+ 
+
+
       
-       const token = localStorage.usertoken
+    
+
+ 
+      
+    
+  
+      componentDidMount() {
+      
+        const token = localStorage.usertoken
         getProfile(token).then(res => {
          if(token){
           this.setState({
@@ -36,21 +52,23 @@ class Profile extends Component {
             last_name: res.last_name,
             email: res.email,
             phone:res.phone,
-            gender:res.gender
+            gender:res.gender,
+            user_id:res._id
           })}
           else{
+            this.props.history.push(`/login`)
             console.log('error')
          
           }
         }) 
-     
-      
       }
-    
+      
+       
+       
    
 
   render() {
-    const token = localStorage.usertoken
+ /*   const token = localStorage.usertoken
     if(!token){
      return (
        <div id="news">
@@ -62,7 +80,7 @@ class Profile extends Component {
      )
   
          
-    }
+    }*/
     return (
       <div className="container">
         <div className="jumbotron mt-5">
@@ -91,6 +109,10 @@ class Profile extends Component {
                 <td>Gender</td>
                 <td>{this.state.gender}</td>
               </tr>
+              <tr>
+                <td>User Id</td>
+                <td>{this.state.user_id}</td>
+              </tr>
               <a href="" onClick={this.logOut.bind(this)} className="nav-link">
             Logout
              </a>
@@ -98,9 +120,11 @@ class Profile extends Component {
           </table>
           <p>Signed in</p>
            <button> <Link to="./bookingroute"> Book Doctor</Link> </button> <br/>
-           <button> <a href="chatbot">Chatbot</a> </button>
-
-
+            <button> <a href="chatbot">Chatbot</a> </button> <br/>
+            <button> <Link to= {"/appointments/"+this.state.user_id}>Appointments</Link> </button>
+ 
+        
+          
 
  
         </div>

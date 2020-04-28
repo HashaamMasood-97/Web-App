@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { getProfile } from './UserFunctions'
 
 import './admin.css';
 
@@ -45,21 +46,26 @@ export class patient extends Component {
      firstName:'',
      lastName:'',
      specialisation:'',
+     doc_id:'',
+     user_id:''
+    
+     
      
    
  
  }
     }
  
+    
  
-    componentDidMount(){                                                            
+    doctorinfo(){                                                            
       axios.get('http://localhost:3500/homemedic/api/doctor/signup/'+this.props.match.params.id)
            .then(response=>{
               this.setState({
                 firstName: response.data.firstName,
                 lastName: response.data.lastName,
                 specialisation: response.data.specialisation,
-                _id: response.data._id
+                doc_id: response.data._id
 
               })
 
@@ -70,10 +76,29 @@ export class patient extends Component {
        }
        )    
   } 
+
+  userid(){
      
+  const token = localStorage.usertoken
+  getProfile(token).then(res => {
+   if(token){
+    this.setState({
+      user_id:res._id
+    })}
+    else{
+      console.log('error')
    
+    }
+  }) 
+}
 
-
+  componentDidMount() {
+      this.userid()
+      this.doctorinfo()
+   
+  
+   
+   }
      
     
 
@@ -141,6 +166,7 @@ onChangePaddress(e){
 onSubmit(e){
     e.preventDefault(); 
 // code to connect backend 
+
 const newTodo ={
 p_name: this.state.p_name,
 p_address: this.state.p_address,
@@ -153,7 +179,10 @@ DOB: this.state.DOB,
 status: this.state.status,
 firstName:this.state.firstName,
 lastName:this.state.lastName,
-specialisation:this.state.specialisation
+specialisation:this.state.specialisation,
+doc_id:this.state.doc_id,
+user_id:this.state.user_id
+
 
 };
 

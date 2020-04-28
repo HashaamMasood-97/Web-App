@@ -51,6 +51,9 @@ export const getProfile = token => {
 }
 
 
+
+
+
 /*  then(response => {
     console.log(response.data);
     if (typeof response.data === 'string'){
