@@ -19,7 +19,9 @@ import DoctorSignUp from './components/pages/DoctorSignUp';
 import DoctorLogin from './components/pages/DoctorLogin';
 import chatbot from './components/pages/chatbot';
 import Profile from './components/pages/Profile';
+import profiledoc from './components/pages/profiledoc';
 import appointments from './components/pages/appointments';
+import docappointments from './components/pages/docappointments';
 import extra from './components/pages/extra';
 
 
@@ -49,7 +51,9 @@ class App extends Component {
      <Route path ="/doctorlogin" component= {DoctorLogin} /> 
      <Route path ="/chatbot" component= {chatbot} />     
      <Route path="/profile" component={Profile} />
+     <Route path="/profiledoc" component={profiledoc} />
      <Route path="/appointments/:id" component={appointments} />
+     <Route path="/docappointments/:id" component={docappointments} />
      <Route path ="/extra" component= {extra} />
    
 

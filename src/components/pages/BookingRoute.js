@@ -59,7 +59,7 @@ export class BookingRoute extends Component {
 
 
     componentDidMount(){
-        axios.get('http://localhost:3500/homemedic/api/doctor/signup/get')
+        axios.get('http://localhost:3500/homemedic/register/doctor/get')
         .then(response => {
             this.setState({homemedic: response.data});
         })

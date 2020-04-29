@@ -59,7 +59,7 @@ export class patient extends Component {
     
  
     doctorinfo(){                                                            
-      axios.get('http://localhost:3500/homemedic/api/doctor/signup/'+this.props.match.params.id)
+      axios.get('http://localhost:3500/homemedic/register/doctor/'+this.props.match.params.id)
            .then(response=>{
               this.setState({
                 firstName: response.data.firstName,

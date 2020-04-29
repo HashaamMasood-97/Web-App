@@ -1,29 +1,14 @@
 import React, { Component } from 'react'
 import './contactus.css';
-import axios from 'axios';
+import { registerDoc } from './DoctorFunctions'
 
 
-
-
-
-
-  
-  
-  
-
-import {
-    setInStorage,
-    getFromStorage,
-  } from './storage';
-  
   export class DoctorSignUp extends Component {
     constructor(props) {
       super(props);
       
       
       this.state = {
-        isLoading: true,
-        token: '',
         firstName: '',
         lastName:'',
         DOB:'',
@@ -36,7 +21,7 @@ import {
         specialisation:'',
         workexp:'',
         email:'',
-        picture:'',
+  
   
   
        
@@ -57,37 +42,43 @@ import {
       this.onTextboxChangeQualification=this.onTextboxChangeQualification.bind(this);
       this.onTextboxChangeSpecialisation=this.onTextboxChangeSpecialisation.bind(this);
       this.onTextboxChangeWorkexp=this.onTextboxChangeWorkexp.bind(this);
-      this.onTextboxChangePIC=this.onTextboxChangePIC.bind(this);
-      this.onSignUp = this.onSignUp.bind(this);
+   
+      this.onSubmit = this.onSubmit.bind(this);
     
     }
   
-    componentDidMount() {
-      const obj = getFromStorage('the_main_app');
-      if (obj && obj.token) {
-        const { token } = obj;
-        // Verify token
-        fetch('http://localhost:3500/homemedic/api/doctor/verify?token=' + token)
-          .then(res => res.json())
-          .then(json => {
-            if (json.success) {
-              this.setState({
-                token,
-                isLoading: false
-              });
-            } else {
-              this.setState({
-                isLoading: false,
-              });
-            }
-          });
-      } else {
-        this.setState({
-          isLoading: false,
-        });
-      }
-    }
+    onSubmit(e) {
+      e.preventDefault()
   
+      const user = {
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password: this.state.password,
+        gender:this.state.gender,
+        contact: this.state.contact,
+        DOB: this.state.DOB,
+        CNIC: this.state.CNIC,
+        workexp: this.state.workexp,
+        specialisation: this.state.specialisation,
+        qualification: this.state.qualification,
+        nationality: this.state.nationality,
+      }
+  
+      const errors = {}
+          const emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+          errors.email = !user.email.match(emailformat) ?
+              "Invalid Email" : ""
+          errors.password = user.password.length < 6 ?
+              "Password should be more than 6 characters" : ""
+          console.log(errors)
+  
+          if (errors.email === "" && errors.password === "") {
+              registerDoc(user).then(res => {
+                  this.props.history.push(`/doctorlogin`)
+              })
+          }
+    }
   
     onTextboxChangeEmail(event) {
       this.setState({
@@ -170,102 +161,17 @@ import {
       }
     
     
-    onSignUp() {
-      // Grab state
-      const {
-        signUpError,
-        firstName,
-        lastName,
-        DOB,
-        CNIC,
-        password,
-        contact,
-        gender,
-        qualification,
-        nationality,
-        specialisation,
-        workexp,
-        email,
-        picture,
-      } = this.state;
-      this.setState({
-        isLoading: true,
-      });
-      // Post request to backend
-      fetch('http://localhost:3500/homemedic/api/doctor/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          firstName: firstName,
-          lastName: lastName,
-          email: email,
-          password: password,
-          contact: contact,
-          gender: gender,
-          DOB:DOB,
-          CNIC:CNIC,
-          qualification:qualification,
-          workexp:workexp,
-          specialisation:specialisation,
-          nationality:nationality,
-          picture:picture,
 
-        }),
-      }).then(res => res.json())
-        .then(json => {
-          console.log('json', json);
-          if (json.success) {
-            this.setState({
-              signUpError: json.message,
-              isLoading: false,
-              firstName: '',
-              lastName:'',
-              DOB:'',
-              CNIC: '',
-              password: '',
-              contact:'',
-              gender:'',
-              qualification:'',
-              nationality:'',
-              specialisation:'',
-              workexp:'',
-              email:'',
-              picture:''
-            });
-          } else {
-            this.setState({
-              signUpError: json.message,
-              isLoading: false,
-            });
-          }
-        });
-    }
   
     
     
     
     render() {
        
-      const {
-        isLoading,
-        token,
-        signUpError,
-        
-      } = this.state;
-      if (isLoading) {
-        return (<div><p>Loading...</p></div>);
-      }
-      if (!token) {
+     
         return (
           
-            <div>
-              {
-                (signUpError) ? (
-                  <p>{signUpError}</p>
-                ) : (null)
-              }
+            
        
     
             <div>
@@ -411,7 +317,7 @@ import {
 
  
         <br/>
-<input type="submit" value="Sign Up" className="fadeIn fourth" defaultValue="Sign Up" onClick={this.onSignUp}/>
+<input type="submit" value="Sign Up" className="fadeIn fourth" defaultValue="Sign Up" onClick={this.onSubmit}/>
 </form>
 
 {/* Remind Passowrd */}
@@ -421,12 +327,12 @@ import {
 </div>
 </div>
 </div>
-</div>
+
 ); }
 
 
 }
-}
+
 
 export default DoctorSignUp
 
