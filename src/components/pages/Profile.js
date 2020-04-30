@@ -46,7 +46,8 @@ class Profile extends Component {
       
         const token = localStorage.usertoken
         getProfile(token).then(res => {
-         if(token){
+         try{
+          if(token){
           this.setState({
             first_name: res.first_name,
             last_name: res.last_name,
@@ -60,6 +61,10 @@ class Profile extends Component {
             console.log('error')
          
           }
+        } catch(error){
+                 localStorage.removeItem('usertoken') 
+                this.props.history.push(`/login`)
+        }
         }) 
       }
       

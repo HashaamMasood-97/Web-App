@@ -30,7 +30,7 @@ class profiledoc extends Component {
 
   logOut(e) {
     e.preventDefault()
-    localStorage.removeItem('usertoken')
+    localStorage.removeItem('doctortoken')
     this.props.history.push(`/doctorlogin`)
   }  
 
@@ -39,8 +39,9 @@ class profiledoc extends Component {
   
       componentDidMount() {
       
-        const token = localStorage.usertoken
+        const token = localStorage.doctortoken
         getProfileDoc(token).then(res => {
+          try{
          if(token){
           this.setState({
             firstName: res.firstName,
@@ -60,7 +61,10 @@ class profiledoc extends Component {
             this.props.history.push(`/doctorlogin`)
             console.log('error')
          
-          }
+          }} catch(error){
+            localStorage.removeItem('usertoken') 
+           this.props.history.push(`/doctorlogin`)
+   }
         }) 
       }
       

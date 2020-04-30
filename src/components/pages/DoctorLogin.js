@@ -71,7 +71,7 @@ export class DoctorLogin extends Component {
 
 
   render() {
-    const token = localStorage.usertoken
+    const token = localStorage.doctortoken
     if(!token){
       return (
         
@@ -101,7 +101,7 @@ export class DoctorLogin extends Component {
       
         {/* Remind Passowrd */}
         <div id="formFooter">
-          <a className="underlineHover" href="#">Forgot Password?</a>
+          <a className="underlineHover" href="#">Forgot Password? Doctor</a>
         </div>
       </div>
     </div>

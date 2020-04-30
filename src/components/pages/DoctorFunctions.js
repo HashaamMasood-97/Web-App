@@ -31,7 +31,7 @@ export const loginsDoc = user => {
           .then(response => {
             console.log(response.data);
             if (typeof response.data === 'string'){
-            localStorage.setItem('usertoken', response.data)
+            localStorage.setItem('doctortoken', response.data)
             } else {
               return ("password incorrect");
             }
