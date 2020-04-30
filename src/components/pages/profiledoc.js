@@ -62,7 +62,7 @@ class profiledoc extends Component {
             console.log('error')
          
           }} catch(error){
-            localStorage.removeItem('usertoken') 
+            localStorage.removeItem('doctortoken') 
            this.props.history.push(`/doctorlogin`)
    }
         }) 
@@ -87,12 +87,18 @@ class profiledoc extends Component {
        
 
     return (
-      <div className="container">
-        <div className="jumbotron mt-5">
-          <div className="col-sm-8 mx-auto">
-            <h1 className="text-center">PROFILE</h1>
-          </div>
-          <table className="table col-md-6 mx-auto">
+     <div>
+       
+          
+       <p class="botp" style={{display: "inline-block"}}>Welcome  Dr. {this.state.firstName} {this.state.lastName} </p>
+           <div class="botss"  style={{display: "inline-block"}}>
+           <button  onClick={this.logOut.bind(this)}   > Logout</button>
+            </div>
+                <div class="botsss1"    style={{display: "inline-block"}}>     <Link to="chatbot"  style={{ textDecoration: 'none' }}> <h1> Chatbot  </h1> </Link> </div>
+                <div class="botsss2"    style={{display: "inline-block"}}>     <Link to={"/docappointments/"+this.state.user_id}  style={{ textDecoration: 'none' }}> <h1> Appointments  </h1> </Link> </div>
+          <div id="profile">  
+          <h1 className="jkl">PROFILE</h1>
+          <table className="tabling">
             <tbody>
               <tr>
                 <td>Fist Name</td>
@@ -138,21 +144,16 @@ class profiledoc extends Component {
                 <td>Doctor Id</td>
                 <td>{this.state.doc_id}</td>
               </tr>
-              <a href="" onClick={this.logOut.bind(this)} className="nav-link">
-            Logout
-             </a>
+           
             </tbody>
           </table>
-          <p>Signed in</p>
          
-            <button> <a href="chatbot">Chatbot</a> </button> <br/>
-            <button> <a href= {"/docappointments/"+this.state.doc_id}>Appointments</a> </button>
  
         
           
 
- 
-        </div>
+  </div>
+        
       </div>
     )
   }

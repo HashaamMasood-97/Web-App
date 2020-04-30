@@ -87,12 +87,20 @@ class Profile extends Component {
          
     }*/
     return (
-      <div className="container">
-        <div className="jumbotron mt-5">
-          <div className="col-sm-8 mx-auto">
-            <h1 className="text-center">PROFILE</h1>
-          </div>
-          <table className="table col-md-6 mx-auto">
+     <div>
+            <p class="botp" style={{display: "inline-block"}}>Welcome  {this.state.first_name} {this.state.last_name} </p>
+           <div class="botss"  style={{display: "inline-block"}}>
+           <button  onClick={this.logOut.bind(this)}   > Logout</button>
+            </div>
+            <div class="botsss"  style={{display: "inline-block"}   } >
+             <Link to="./bookingroute"   style={{ textDecoration: 'none' }}> <h1>Book Doctor</h1></Link>
+                </div>
+
+                <div class="botsss1"    style={{display: "inline-block"}}>     <Link to="chatbot"   style={{ textDecoration: 'none' }}> <h1> Chatbot  </h1> </Link> </div>
+                <div class="botsss2"    style={{display: "inline-block"}}>     <Link to={"/appointments/"+this.state.user_id}    style={{ textDecoration: 'none' }}> <h1> Appointments  </h1> </Link> </div>
+          <div id="profile">  
+          <h1 className="jkl">PROFILE</h1>
+          <table className="tabling">
             <tbody>
               <tr>
                 <td>Fist Name</td>
@@ -118,22 +126,21 @@ class Profile extends Component {
                 <td>User Id</td>
                 <td>{this.state.user_id}</td>
               </tr>
-              <a href="" onClick={this.logOut.bind(this)} className="nav-link">
-            Logout
-             </a>
-            </tbody>
+              </tbody>
           </table>
-          <p>Signed in</p>
-           <button> <Link to="./bookingroute"> Book Doctor</Link> </button> <br/>
-            <button> <a href="chatbot">Chatbot</a> </button> <br/>
-            <button> <Link to= {"/appointments/"+this.state.user_id}>Appointments</Link> </button>
+              </div>
+           
+          
+          
+         
+
+     
  
         
           
 
  
-        </div>
-      </div>
+            </div>
     )
   }
 }

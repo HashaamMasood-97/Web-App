@@ -281,4 +281,157 @@
             #news button{
                 margin-top: 30px;
             }
+
+
+            #profile{
+                margin: auto;
+               width: 800px;
+               background-color: #dcdcdc
+               ;
+               margin-top: 80px;
+               margin-bottom: 30px;
+               
+            }
            
+            #profile table {
+                margin: auto;
+                width: 600px;
+                margin-top: 20px;
+               
+                
+            
+            }
+            #profile table tbody tr td{
+                background-color: #dcdcdc;
+
+              padding: 15px;
+              text-align: center;
+              font-weight: bold;
+              font-size: large;
+              font-family: 'Times New Roman', Times, serif;
+                
+            
+            }
+
+          
+
+
+
+            .jkl{
+                text-align: center;
+                color: black;
+                font-weight: bold;
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+         .botss {
+            margin: auto;
+            border-radius: 10px;
+            width: 100px;
+            height: 40px;
+            background-color: #dcdcdc  ;
+            text-align: center;
+            padding-top: 10px;
+            margin-top: 10px;
+            float: right;
+            margin-right: 2px;
+            
+          
+        }
+
+       .botss button{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        
+       }
+           
+       
+       .botsss {
+        margin: auto;
+        border-radius: 10px;
+        
+        width: 100px;
+        height: 40px;
+        margin-right: 2px;
+        background-color: #dcdcdc;
+        text-align: center;
+        float: right;
+        margin-top: 10px;
+        
+      
+    }
+
+   .botsss h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+    color: black;
+    padding-top: 10px;
+    
+    
+   }
+
+   .botsss1 {
+    margin: auto;
+    border-radius: 10px;
+   
+    width: 100px;
+    height: 40px;
+    margin-right: 2px;
+    background-color: #dcdcdc;
+    text-align: center;
+    float: right;
+    margin-top: 10px;
+  
+  
+}
+
+.botsss1 h1{
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+text-decoration: none;
+font-size: 13px;
+color: black;
+padding-top: 10px;
+
+
+}
+ 
+
+.botsss2 {
+    margin: auto;
+    border-radius: 10px;
+  
+    width: 100px;
+    height: 40px;
+
+    background-color: #dcdcdc;
+    text-align: center;
+    float: right;
+    margin-top: 10px;
+    margin-right: 2px;
+  
+  
+}
+
+.botsss2  h1{
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+text-decoration: none;
+font-size: 13px;
+color: black;
+padding-top: 10px;
+
+
+
+}
+
+.botp{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+color: black;
+}
+   
