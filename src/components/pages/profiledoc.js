@@ -94,8 +94,10 @@ class profiledoc extends Component {
            <div class="botss"  style={{display: "inline-block"}}>
            <button  onClick={this.logOut.bind(this)}   > Logout</button>
             </div>
-                <div class="botsss1"    style={{display: "inline-block"}}>     <Link to="chatbot"  style={{ textDecoration: 'none' }}> <h1> Chatbot  </h1> </Link> </div>
-                <div class="botsss2"    style={{display: "inline-block"}}>     <Link to={"/docappointments/"+this.state.user_id}  style={{ textDecoration: 'none' }}> <h1> Appointments  </h1> </Link> </div>
+                <div class="botsss1"    style={{display: "inline-block"}}>     <a href="chatbot"  style={{ textDecoration: 'none' }}> <h1> Chatbot  </h1> </a> </div>
+                <div class="botsss2"    style={{display: "inline-block"}}>     <Link to={"/docappointments/"+this.state.doc_id}  style={{ textDecoration: 'none' }}> <h1> Appointments  </h1> </Link> </div>
+                <div class="botsss3"    style={{display: "inline-block"}}>     <Link to={"/updateinfodoc/"+this.state.doc_id}    style={{ textDecoration: 'none' }}> <h1> Update Info  </h1> </Link> </div>
+           
           <div id="profile">  
           <h1 className="jkl">PROFILE</h1>
           <table className="tabling">

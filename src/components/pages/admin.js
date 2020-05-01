@@ -15,7 +15,7 @@ export class admin extends Component {
     render() {
         return (
           <div className="fill">
-             
+             <div class="botsss4"    style={{display: "inline-block"}}>     <a href="/doctorsignup/"    style={{ textDecoration: 'none' }}> <h1> Add Doctor  </h1> </a> </div>
             <div id="aaa">
             <a href="./userretrieval">
               <div class="box" style={{display: "inline-block"}}> 

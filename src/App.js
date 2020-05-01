@@ -23,6 +23,8 @@ import profiledoc from './components/pages/profiledoc';
 import appointments from './components/pages/appointments';
 import docappointments from './components/pages/docappointments';
 import extra from './components/pages/extra';
+import updateinfouser from './components/pages/updateinfouser';
+import updateinfodoc from './components/pages/updateinfodoc';
 
 
 
@@ -54,6 +56,8 @@ class App extends Component {
      <Route path="/profiledoc" component={profiledoc} />
      <Route path="/appointments/:id" component={appointments} />
      <Route path="/docappointments/:id" component={docappointments} />
+     <Route path="/updateinfouser/:id" component={updateinfouser} />
+     <Route path="/updateinfodoc/:id" component={updateinfodoc} />
      <Route path ="/extra" component= {extra} />
    
 

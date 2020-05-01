@@ -428,6 +428,37 @@ padding-top: 10px;
 
 }
 
+
+.botsss3 {
+    margin: auto;
+    border-radius: 10px;
+  
+    width: 100px;
+    height: 40px;
+
+    background-color: #dcdcdc;
+    text-align: center;
+    float: right;
+    margin-top: 10px;
+    margin-right: 2px;
+  
+  
+}
+
+.botsss3  h1{
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+text-decoration: none;
+font-size: 13px;
+color: black;
+padding-top: 10px;
+
+
+
+}
+
+
+
 .botp{
     font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
@@ -435,3 +466,33 @@ font-weight: bold;
 color: black;
 }
    
+
+
+.botsss4 {
+    margin: auto;
+    border-radius: 10px;
+  
+    width: 100px;
+    height: 40px;
+
+    background-color: #E77;
+    text-align: center;
+    float: right;
+    margin-top: -30px;
+    margin-right: 2px;
+    border: 1px solid black;
+  
+  
+}
+
+.botsss4  h1{
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+text-decoration: none;
+font-size: 13px;
+color: white;
+padding-top: 10px;
+
+
+
+}
