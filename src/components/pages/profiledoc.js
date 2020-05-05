@@ -23,6 +23,7 @@ class profiledoc extends Component {
         specialisation:'',
         workexp:'',
         email:'',
+        fee:'',
         
       errors: {}
     }
@@ -56,6 +57,7 @@ class profiledoc extends Component {
             nationality:res.nationality,
             specialisation:res.specialisation,
             workexp:res.workexp,
+            fee:res.fee
           })}
           else{
             this.props.history.push(`/doctorlogin`)
@@ -97,7 +99,7 @@ class profiledoc extends Component {
                 <div class="botsss1"    style={{display: "inline-block"}}>     <a href="chatbot"  style={{ textDecoration: 'none' }}> <h1> Chatbot  </h1> </a> </div>
                 <div class="botsss2"    style={{display: "inline-block"}}>     <Link to={"/docappointments/"+this.state.doc_id}  style={{ textDecoration: 'none' }}> <h1> Appointments  </h1> </Link> </div>
                 <div class="botsss3"    style={{display: "inline-block"}}>     <Link to={"/updateinfodoc/"+this.state.doc_id}    style={{ textDecoration: 'none' }}> <h1> Update Info  </h1> </Link> </div>
-           
+                <div class="botsss5"    style={{display: "inline-block"}}>     <Link to={"/weeklytimetable/"+this.state.doc_id}    style={{ textDecoration: 'none' }}> <h1> Set Weekly Schedule  </h1> </Link> </div> 
           <div id="profile">  
           <h1 className="jkl">PROFILE</h1>
           <table className="tabling">
@@ -145,6 +147,10 @@ class profiledoc extends Component {
               <tr>
                 <td>Doctor Id</td>
                 <td>{this.state.doc_id}</td>
+              </tr>
+              <tr>
+                <td>Fee</td>
+                <td>{this.state.fee}</td>
               </tr>
            
             </tbody>

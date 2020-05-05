@@ -25,6 +25,8 @@ import docappointments from './components/pages/docappointments';
 import extra from './components/pages/extra';
 import updateinfouser from './components/pages/updateinfouser';
 import updateinfodoc from './components/pages/updateinfodoc';
+import weeklytimetable from './components/pages/weeklytimetable';
+
 
 
 
@@ -58,6 +60,7 @@ class App extends Component {
      <Route path="/docappointments/:id" component={docappointments} />
      <Route path="/updateinfouser/:id" component={updateinfouser} />
      <Route path="/updateinfodoc/:id" component={updateinfodoc} />
+     <Route path="/weeklytimetable/:id" component={weeklytimetable} />
      <Route path ="/extra" component= {extra} />
    
 

@@ -63,6 +63,11 @@ import { registerDoc } from './DoctorFunctions'
         specialisation: this.state.specialisation,
         qualification: this.state.qualification,
         nationality: this.state.nationality,
+        slot1:this.state.slot1,
+        slot2:this.state.slot2,
+        slot3:this.state.slot3,
+        slot4:this.state.slot4,
+        slot5:this.state.slot5,
       }
   
       const errors = {}

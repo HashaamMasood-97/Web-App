@@ -12,6 +12,7 @@ export class updateinfodoc extends Component {
         this.onTextboxChangeFirstName=this.onTextboxChangeFirstName.bind(this);  
         this.onTextboxChangeLastName=this.onTextboxChangeLastName.bind(this);
         this.onTextboxChangeContact=this.onTextboxChangeContact.bind(this);
+        this.onTextboxChangeFee=this.onTextboxChangeFee.bind(this);
      
         this.onTextboxChangeDOB=this.onTextboxChangeDOB.bind(this);
         this.onTextboxChangeNationality=this.onTextboxChangeNationality.bind(this);
@@ -33,7 +34,8 @@ export class updateinfodoc extends Component {
         specialisation:'',
         workexp:'',
         email:'',
-        doc_id:''
+        doc_id:'',
+        fee:''
   
   
   
@@ -80,7 +82,12 @@ export class updateinfodoc extends Component {
      }
        
 
-
+     onTextboxChangeFee(event) {
+      this.setState({
+        fee: event.target.value,
+      });
+    }
+  
 
      onTextboxChangeFirstName(event) {
         this.setState({
@@ -146,6 +153,7 @@ export class updateinfodoc extends Component {
                 specialisation: this.state.specialisation,
                 qualification: this.state.qualification,
                 nationality: this.state.nationality,
+                fee:this.state.fee
               }
             axios.post('http://localhost:3500/homemedic/doctor/update/'+ this.props.match.params.id, user)
                   .then(res => console.log(res.data));
@@ -234,6 +242,15 @@ export class updateinfodoc extends Component {
                   <td>Doctor Id</td>
                   <td>{this.state.doc_id}</td>
                 </tr>
+
+<tr>
+                <td>Fee</td>
+                  <td> <input   type="text"
+                             className="form-control"
+                             value={this.state.fee}
+                             onChange={this.onTextboxChangeFee}
+                               /></td>
+                                </tr>
              
               </tbody>
             </table>

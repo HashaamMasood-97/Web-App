@@ -14,7 +14,8 @@ export const registerDoc = newUser => {
       specialisation: newUser.specialisation,
       workexp: newUser.workexp,
       qualification: newUser.qualification,
-      nationality:newUser.nationality
+      nationality:newUser.nationality,
+    
     })
     .then(response => {
       console.log('Registered')

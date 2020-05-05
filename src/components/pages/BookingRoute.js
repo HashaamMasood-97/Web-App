@@ -11,8 +11,11 @@ import logo from "./a.jpg";
 
 
 
+
+
+
  const User= props =>(
-    
+
     <div class="doc" style={{display: "inline-block" }} >
   
       <h4 class="hey"> Dr. {props.user.firstName} {props.user.lastName}</h4>
@@ -24,7 +27,20 @@ import logo from "./a.jpg";
       <p>{props.user.qualification}</p>
       <h5>EXPERIENCE</h5> 
       <p>{props.user.workexp}</p>
+      <h5>Fee</h5> 
+      <p>{props.user.fee}</p>
+      <h5>Availabe Time Slots</h5> 
+      <p>{props.user.slot1}</p>
+      <p>{props.user.slot2}</p>
+      <p>{props.user.slot3}</p>
+      <p>{props.user.slot4}</p>
+      <p>{props.user.slot5}</p>
       
+
+  
+
+  
+     
 
       </div>
       
@@ -91,19 +107,19 @@ DoctorList(){
     render() {
  
         return (
-           <div> 
+         
       
-           <input label="Search Doctor" icon="search" onChange={this.onChangeSearch}/>
+          
             <div >
          
                           
                            {this.DoctorList()}
 
                  
-                
+                           
             
            </div>
-           </div>
+   
         )
     }
 }

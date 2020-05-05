@@ -17,7 +17,7 @@ import './admin.css';
        <td>{props.user.qualification}</td>
        <td>{props.user.workexp}</td>
        <td>{props.user.specialisation}</td>
-       <td>{props.user.signUpDate}</td>
+       <td>{props.user.date}</td>
    </tr>
 
 
