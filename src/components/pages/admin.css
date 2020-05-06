@@ -16,8 +16,8 @@
  } 
 
 .school td {
-    padding: 20px;
-    font-size: 12px;
+    padding: 8px;
+    font-size: 11px;
     font-weight: bold;
     text-align: center;
     background-color: whitesmoke;
@@ -27,8 +27,8 @@
 
 
 .school th {
-    padding: 20px;
-    font-size: 15px;
+    padding: 8px;
+    font-size: 13px;
     font-weight: bold;
     text-align: center;
     
@@ -36,8 +36,38 @@
 
 }
 
+#spc{
+    width: 116px
+}
 
 
+.schoolss{
+      margin-left:auto; 
+      margin-right:auto; 
+  
+      width: 50%;
+   } 
+  
+  .schoolss td {
+      padding: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+      background-color: whitesmoke;
+  
+  
+  }
+  
+  
+  .schoolss th {
+      padding: 20px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      
+  
+  
+  }
 
 .fill h2{
                
@@ -209,6 +239,7 @@
             height: 50px;
             margin-top: 30px;
             text-align: center;
+            margin-bottom: 30px;
 
           }
 
@@ -523,4 +554,40 @@ padding-top: 10px;
 
 
 
+}
+
+
+.botsss6 {
+    margin: auto;
+    border-radius: 10px;
+  
+    width: 100px;
+    height: 40px;
+
+    background-color: #E77;
+    text-align: center;
+    float: right;
+    margin-top: -30px;
+    margin-right: 2px;
+    border: 1px solid black;
+  
+  
+}
+
+.botsss6  h1{
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+text-decoration: none;
+font-size: 11px;
+color: white;
+padding-top: 7px;
+
+
+
+}
+
+#bookingnew{
+    width:250px;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -2,13 +2,17 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import './admin.css';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 
-import logo from "./a.jpg";
 
 
 
 
+
+
+ 
 
 
 
@@ -29,19 +33,11 @@ import logo from "./a.jpg";
       <p>{props.user.workexp}</p>
       <h5>Fee</h5> 
       <p>{props.user.fee}</p>
-      <h5>Availabe Time Slots</h5> 
-      <p>{props.user.slot1}</p>
-      <p>{props.user.slot2}</p>
-      <p>{props.user.slot3}</p>
-      <p>{props.user.slot4}</p>
-      <p>{props.user.slot5}</p>
-      
-
-  
-
-  
      
-
+     
+      <Dropdown  options={['Slot 1: ' + props.user.slot1, 'Slot 2: ' +props.user.slot2, 'Slot 3: ' +props.user.slot3,
+      'Slot 4: ' +props.user.slot4,'Slot 5: ' +props.user.slot5]}   placeholder="Available Time Slots" />
+      
       </div>
       
       <div class="botaa"> 
@@ -60,6 +56,8 @@ import logo from "./a.jpg";
 
 
  )
+
+
 
 export class BookingRoute extends Component {
 

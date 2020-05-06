@@ -3,6 +3,8 @@ import axios from 'axios';
 import { getProfile } from './UserFunctions'
 
 import './admin.css';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
      
      
@@ -25,6 +27,7 @@ export class patient extends Component {
         this.onChangeHistory=this.onChangeHistory.bind(this);
         this.onChangeDOB=this.onChangeDOB.bind(this);
         this.onChangeStatus=this.onChangeStatus.bind(this);
+        this.onChangeTimeSlot=this.onChangeTimeSlot.bind(this);
       
         this.onSubmit=this.onSubmit.bind(this);
  
@@ -47,7 +50,17 @@ export class patient extends Component {
      lastName:'',
      specialisation:'',
      doc_id:'',
-     user_id:''
+     user_id:'',
+     user_last:'',
+     user_first:'',
+     timeslot:'',
+     fee:'',
+     slot1:'',
+     slot2:'',
+     slot3:'',
+     slot4:'',
+     slot5:'',
+  
     
      
      
@@ -65,7 +78,14 @@ export class patient extends Component {
                 firstName: response.data.firstName,
                 lastName: response.data.lastName,
                 specialisation: response.data.specialisation,
-                doc_id: response.data._id
+                doc_id: response.data._id,
+                fee:response.data.fee,
+                slot1:response.data.slot1,
+                slot2:response.data.slot2,
+                slot3:response.data.slot3,
+                slot4:response.data.slot4,
+                slot5:response.data.slot5,
+               
 
               })
 
@@ -83,7 +103,9 @@ export class patient extends Component {
   getProfile(token).then(res => {
    if(token){
     this.setState({
-      user_id:res._id
+      user_id:res._id,
+      user_first:res.first_name,
+      user_last:res.last_name, 
     })}
     else{
       console.log('error')
@@ -150,6 +172,12 @@ onChangePsex(e){
     });
 }
 
+onChangeTimeSlot(e){
+  this.setState({
+      timeslot: e.target.value
+  });
+}
+
 onChangePname(e){
     this.setState({
         p_name: e.target.value
@@ -181,8 +209,12 @@ firstName:this.state.firstName,
 lastName:this.state.lastName,
 specialisation:this.state.specialisation,
 doc_id:this.state.doc_id,
-user_id:this.state.user_id
-
+user_id:this.state.user_id,
+user_first:this.state.user_first,
+user_last:this.state.user_last,
+fee:this.state.fee,
+timeslot:this.state.timeslot,
+bookingstatus:'Booking Pending'
 
 };
 
@@ -221,11 +253,94 @@ this.props.history.push('/');
                   <br/>
                  
                   {this.state.specialisation}
+                  <br/>
+                  Fee: {this.state.fee}
+                  <br/>
+                {/*  <Dropdown  options={['Slot 1: ' + this.state.slot1, 'Slot 2: ' +this.state.slot2, 'Slot 3: ' +this.state.slot3,
+                         'Slot 4: ' +this.state.slot4,'Slot 5: ' +this.state.slot5]}  
+                          
+                         onChange={this.onChangeTimeSlot}
+        placeholder="Available Time Slots" />  */}
                   </p>
+
+                      
+                  <div className="form-group">
+                        <p  style={{marginTop: 10 }}>SELECT TIMESLOT</p>
+                        <div className="form-check form-check-inline">
+                           <input className="form-check-input"
+                    type="radio"
+                    name="priorityOpt"
+                    id="priorityLows"
+                    value={this.state.slot1}
+                    checked={this.state.timeslot==this.state.slot1}
+                    onChange={this.onChangeTimeSlot}
+                    />
+             <label className="form-check-label">  SLOT 1:  { this.state.slot1}         </label>
+             < br/>
+
+                    
+
+                  
+                 <input className="form-check-input"
+                    type="radio"
+                    name="priorityOpt"
+                    id="priorityMediums"
+                    value={this.state.slot2}
+                    checked={this.state.timeslot==this.state.slot2}
+                    onChange={this.onChangeTimeSlot}
+                    />
+             <label className="form-check-label" > SLOT 2:  {this.state.slot2}   </label>
+             < br/>
+
+
+             <input className="form-check-input"
+                    type="radio"
+                    name="priorityOpt"
+                    id="priorityMediums"
+                    value={this.state.slot3}
+                    checked={this.state.timeslot==this.state.slot3}
+                    onChange={this.onChangeTimeSlot}
+                    />
+             <label className="form-check-label" > SLOT 3:  {this.state.slot3}   </label>
+             < br/>
+
+             <input className="form-check-input"
+                    type="radio"
+                    name="priorityOpt"
+                    id="priorityMediums"
+                    value={this.state.slot4}
+                    checked={this.state.timeslot==this.state.slot4}
+                    onChange={this.onChangeTimeSlot}
+                    />
+             <label className="form-check-label" > SLOT 4:  {this.state.slot4}   </label>
+             < br/>
+
+             <input className="form-check-input"
+                    type="radio"
+                    name="priorityOpt"
+                    id="priorityMediums"
+                    value={this.state.slot5}
+                    checked={this.state.timeslot==this.state.slot5}
+                    onChange={this.onChangeTimeSlot}
+                    />
+             <label className="form-check-label" > SLOT 5:  {this.state.slot5}   </label>
+
+             
+
+                  
+                   
+                  </div>  
+                 
+                  </div>
+
+
+
                   </div>
                                
              
-             
+                 
+                  < br/> 
+
                 <div className="wrap-input100 validate-input" data-validate="Name is required">
                           <span className="label-input100">Full Name:</span>
                           <input className="input100"

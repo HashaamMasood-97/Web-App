@@ -26,6 +26,8 @@ import extra from './components/pages/extra';
 import updateinfouser from './components/pages/updateinfouser';
 import updateinfodoc from './components/pages/updateinfodoc';
 import weeklytimetable from './components/pages/weeklytimetable';
+import connectivity from './components/pages/connectivity';
+import bookingStatus from './components/pages/bookingStatus';
 
 
 
@@ -61,6 +63,8 @@ class App extends Component {
      <Route path="/updateinfouser/:id" component={updateinfouser} />
      <Route path="/updateinfodoc/:id" component={updateinfodoc} />
      <Route path="/weeklytimetable/:id" component={weeklytimetable} />
+     <Route path="/connectivity" component={connectivity} />
+     <Route path="/bookingstatus/:id" component={bookingStatus} />
      <Route path ="/extra" component= {extra} />
    
 

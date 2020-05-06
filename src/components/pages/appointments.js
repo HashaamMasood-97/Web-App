@@ -6,9 +6,10 @@ import './admin.css';
 
 
  const User= props =>(
-   <tr>
+   <tr><td id="spc">{props.user.bookingstatus}</td>
        <td>{props.user.firstName} {props.user.lastName}</td>
        <td>{props.user.specialisation}</td>
+       <td>{props.user.user_first} {props.user.user_last}</td>
        <td>{props.user.p_name}</td>
        <td>{props.user.p_phone}</td>
        <td>{props.user.p_email}</td>
@@ -18,6 +19,8 @@ import './admin.css';
        <td>{props.user.details}</td>
         <td>{props.user.p_sex}</td>
         <td>{props.user.status}</td>
+        <td>{props.user.fee}</td>
+        <td>{props.user.timeslot}</td>
        
        
       
@@ -68,8 +71,10 @@ PatientList(){
             <table className="school" style={{marginTop:20}} >
                  <thead>
                          <tr>
+                         <th>Booking Status</th>
                             <th>Doctor Name</th>
-                            <th>Specialisation</th>                      
+                            <th>Specialisation</th>
+                            <th>User Name</th>                      
                              <th>Patient Name</th>
                              <th>Contact Number</th>
                              <th>E-mail</th>
@@ -79,6 +84,8 @@ PatientList(){
                              <th>Details</th>
                              <th>Gender</th>
                              <th>Marital Status</th>
+                             <th>FEE</th>
+                             <th>Timeslot</th>
                                                        
                            
                       
