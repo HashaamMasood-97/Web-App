@@ -79,8 +79,8 @@ export class bookingStatus extends Component {
                     type="radio"
                     name="priorityOption"
                     id="priorityLow"
-                    value="Booking Completed"
-                    checked={this.state.bookingstatus=='Booking Completed'}
+                    value="Completed"
+                    checked={this.state.bookingstatus=='Completed'}
                     onChange={this.onChangeBookingStatus}
                     />
              <label className="form-check-label">      Completed     </label>
@@ -90,8 +90,8 @@ export class bookingStatus extends Component {
                     type="radio"
                     name="priorityOption"
                     id="priorityMedium"
-                    value="Booking Accepted"
-                    checked={this.state.bookingstatus=='Booking Accepted'}
+                    value="Accepted"
+                    checked={this.state.bookingstatus=='Accepted'}
                     onChange={this.onChangeBookingStatus}
                     />
              <label className="form-check-label" >   Accepted   </label>
@@ -101,8 +101,8 @@ export class bookingStatus extends Component {
                     type="radio"
                     name="priorityOption"
                     id="priorityMediumss"
-                    value="Booking Declined"
-                    checked={this.state.bookingstatus=='Booking Declined'}
+                    value="Declined"
+                    checked={this.state.bookingstatus=='Declined'}
                     onChange={this.onChangeBookingStatus}
                     />
              <label className="form-check-label" >   Declined   </label>

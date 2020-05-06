@@ -214,7 +214,7 @@ user_first:this.state.user_first,
 user_last:this.state.user_last,
 fee:this.state.fee,
 timeslot:this.state.timeslot,
-bookingstatus:'Booking Pending'
+bookingstatus:'Pending'
 
 };
 

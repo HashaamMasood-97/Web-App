@@ -99,6 +99,7 @@ class Profile extends Component {
                 <div class="botsss1"    style={{display: "inline-block"}}>     <a href="chatbot"   style={{ textDecoration: 'none' }}> <h1> Chatbot  </h1> </a> </div>
                 <div class="botsss2"    style={{display: "inline-block"}}>     <Link to={"/appointments/"+this.state.user_id}    style={{ textDecoration: 'none' }}> <h1> Appointments  </h1> </Link> </div>
                 <div class="botsss3"    style={{display: "inline-block"}}>     <Link to={"/updateinfouser/"+this.state.user_id}    style={{ textDecoration: 'none' }}> <h1> Update Info  </h1> </Link> </div>
+                <div class="botssss"    style={{display: "inline-block"}}>     <Link to={"/patmsg/"+this.state.user_id}    style={{ textDecoration: 'none' }}> <h1> Your Messages </h1> </Link> </div> 
           <div id="profile">  
           <h1 className="jkl">PROFILE</h1>
           <table className="tabling">

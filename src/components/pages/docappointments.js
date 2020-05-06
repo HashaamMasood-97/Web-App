@@ -7,12 +7,12 @@ import './admin.css';
 
  const User= props =>(
    <tr>
-       <td id="spc">{props.user.bookingstatus}
+       <td id="spc">{props.user.bookingstatus} <br/>
        
         
-        <Link to= {"/bookingstatus/" +  props.user._id}> 
-             Edit
-        </Link>  
+           <Link to= {"/bookingstatus/" +  props.user._id}> 
+                Edit
+         </Link>  
         
        
        </td>

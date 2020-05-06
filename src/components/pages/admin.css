@@ -37,7 +37,7 @@
 }
 
 #spc{
-    width: 116px
+    width: 100px
 }
 
 
@@ -448,6 +448,37 @@ padding-top: 10px;
 }
 
 .botsss2  h1{
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+text-decoration: none;
+font-size: 13px;
+color: black;
+padding-top: 10px;
+
+
+
+}
+
+
+
+
+.botssss {
+    margin: auto;
+    border-radius: 10px;
+  
+    width: 100px;
+    height: 40px;
+
+    background-color: #dcdcdc;
+    text-align: center;
+    float: right;
+    margin-top: 10px;
+    margin-right: 2px;
+  
+  
+}
+
+.botssss  h1{
 font-family: 'Times New Roman', Times, serif;
 font-weight: bold;
 text-decoration: none;
