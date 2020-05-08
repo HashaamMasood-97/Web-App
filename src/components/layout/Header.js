@@ -21,11 +21,11 @@ import{Link} from 'react-router-dom';
           <ul id="menu">
             {/* put class="selected" in the li tag for the selected page - to highlight which page you're on */}
             <li><a href="/">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="login">Sign In/Up</a></li>
-            <li><a href="doctor">Doctors</a></li>
-            <li><a href="contactus">Contact Us</a></li>
-            <li><a href="admin">Admin</a></li>
+            <li><a href="http://localhost:3000/about">About</a></li>
+            <li><a href="http://localhost:3000/login">Sign In/Up</a></li>
+            <li><a href="http://localhost:3000/doctor">Doctors</a></li>
+            <li><a href="http://localhost:3000/contactus">Contact Us</a></li>
+            <li><a href="http://localhost:3000/admin">Admin</a></li>
          
            
             
