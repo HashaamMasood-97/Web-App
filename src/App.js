@@ -30,6 +30,8 @@ import connectivity from './components/pages/connectivity';
 import bookingStatus from './components/pages/bookingStatus';
 import patmsg from './components/pages/patmsg';
 import docmsg  from './components/pages/docmsg';
+import images  from './components/pages/images';
+import imgret  from './components/pages/imgret';
 
 
 
@@ -69,6 +71,8 @@ class App extends Component {
      <Route path="/bookingstatus/:id" component={bookingStatus} />
      <Route path="/patmsg/:id" component={patmsg} />
      <Route path="/docmsg/:id" component={docmsg} />
+     <Route path="/images" component={images} />
+     <Route path="/imgret" component={imgret} />
      <Route path ="/extra" component= {extra} />
    
 
