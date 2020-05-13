@@ -28,7 +28,7 @@ export class DoctorRetrieval extends Component {
 
     constructor(props) {
         super(props);
-        this.state={homemedic: []};
+        this.state={homemedic: [],  search:''};
     }
 
 
@@ -43,10 +43,19 @@ export class DoctorRetrieval extends Component {
         )
     }
     
+    updateSearch(event){
+        this.setState({
+            search: event.target.value.substr(0,20)
+        });
+    }
 
     
 DoctorList(){
-    return this.state.homemedic.map(function(currentUser, i){
+    return this.state.homemedic.filter(
+        (currentUser)=>{
+            return currentUser.firstName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+        }
+    ).map(function(currentUser, i){
 
      return<User user={currentUser} key={i} />;
 
@@ -58,6 +67,9 @@ DoctorList(){
         return (
             <div id="div23">
             <h3  id="abcdef"> DOCTORS </h3>
+            <div id="search1">
+              <input id="searchs" placeholder="Search Doctor" type="text" value={this.state.search} onChange={this.updateSearch.bind(this)}/>
+              </div>
             <table className="school" style={{marginTop:20}} >
                  <thead>
                          <tr>

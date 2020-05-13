@@ -41,7 +41,10 @@ export class patientRetrieval extends Component {
 
     constructor(props) {
         super(props);
-        this.state={homemedic: []};
+        this.state={
+            homemedic: [],
+            search:''
+        };
     }
 
 
@@ -56,9 +59,19 @@ export class patientRetrieval extends Component {
         )
     }
 
+    updateSearch(event){
+        this.setState({
+            search: event.target.value.substr(0,20)
+        });
+    }
+
     
 PatientList(){
-    return this.state.homemedic.map(function(currentUser, i){
+    return this.state.homemedic.filter(
+        (currentUser)=>{
+            return currentUser.p_name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+        }
+    ).map(function(currentUser, i){
 
      return<User user={currentUser} key={i} />;
 
@@ -70,6 +83,9 @@ PatientList(){
         return (
             <div id="div23">
             <h3  id="abcdef"> Booking Forms </h3>
+            <div id="search1">
+              <input id="searchs" placeholder="Search Form" type="text" value={this.state.search} onChange={this.updateSearch.bind(this)}/>
+              </div>
             <table className="school" style={{marginTop:20}} >
                  <thead>
                          <tr>

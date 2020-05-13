@@ -20,41 +20,14 @@ import 'react-dropdown/style.css';
 
  const User= props =>(
 
-    <div class="doc" style={{display: "inline-block" }} >
-  
-      <h4 class="hey"> Dr. {props.user.firstName} {props.user.lastName}</h4>
-       
-       <div class="bota">
-      <h5>SPECIALIZATION</h5> 
-      <p>{props.user.specialisation}</p>
-      <h5>QUALIFICATION</h5> 
-      <p>{props.user.qualification}</p>
-      <h5>EXPERIENCE</h5> 
-      <p>{props.user.workexp}</p>
-      <h5>Fee</h5> 
-      <p>{props.user.fee}</p>
-     
-     
-      <Dropdown  options={['Slot 1: ' + props.user.slot1, 'Slot 2: ' +props.user.slot2, 'Slot 3: ' +props.user.slot3,
-      'Slot 4: ' +props.user.slot4,'Slot 5: ' +props.user.slot5]}   placeholder="Available Time Slots" />
-      
-      </div>
-      
-      <div class="botaa"> 
-        <Link to= {"/patient/" +  props.user._id}> 
-                <input type="submit" value="BOOK NOW" className="btn btn-primary" /> 
-        </Link>  
-       </div> 
-     </div>           
-
-
-
-
-
-
-
-
-
+    <tr>
+    <td>{props.user.firstName}</td>
+    <td>{props.user.lastName}</td>
+    <td>{props.user.qualification}</td>
+    <td>{props.user.workexp}</td>
+    <td>{props.user.specialisation}</td>
+    <td><Link to= {"/bookingroute1/" +  props.user._id}><p>View Profile</p>  </Link>  </td>
+</tr>       
  )
 
 
@@ -63,13 +36,20 @@ export class BookingRoute extends Component {
 
     constructor(props) {
         super(props);
-       this.state={homemedic: []};
+       this.state={
+           homemedic: [],
+           search:''
+        };
 
 
       
     }
 
-   
+   updateSearch(event){
+       this.setState({
+           search: event.target.value.substr(0,20)
+       });
+   }
 
 
     componentDidMount(){
@@ -83,18 +63,19 @@ export class BookingRoute extends Component {
         )
     }
 
-onChangeSearch=(e)=>{
-    this.setState({
-        search: e.taget.value
-    });
-}
+
 
     
   
    
     
 DoctorList(){
-    return this.state.homemedic.map(function(currentUser, i){
+    return this.state.homemedic.filter(
+     (currentUser)=>{
+         return currentUser.firstName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+     }
+   
+    ).map(function(currentUser, i){
 
      return<User user={currentUser} key={i} />;
 
@@ -107,16 +88,41 @@ DoctorList(){
         return (
          
       
-          
-            <div >
-         
+          <div>            
+             
+              
+              <div id="div23">
+            <h3  id="abcdef"> DOCTORS </h3>
+           
+            <div id="search1">
+              <input id="searchs" placeholder="Search Doctor" type="text" value={this.state.search} onChange={this.updateSearch.bind(this)}/>
+              </div>
+           
+            <table className="school" style={{marginTop:20}} >
+                 <thead>
+                         <tr>
+                             <th>First Name</th>
+                             <th>Last Name</th>                            
+                           
+                                           
+                             <th>Qualification</th>
+                             <th>Work Experience</th>
+                             <th>Specialisation</th>
+                             <th>Book Now</th>                        
+                             
                           
+                         </tr>
+
+                 </thead>
+                 <tbody>
                            {this.DoctorList()}
 
-                 
-                           
-            
+                 </tbody>
+                
+            </table>
            </div>
+           </div>
+
    
         )
     }

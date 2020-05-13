@@ -27,7 +27,7 @@ import{Link} from 'react-router-dom';
             <li><a href="http://localhost:3000/contactus">Contact Us</a></li>
             <li><a href="http://localhost:3000/admin">Admin</a></li>
             <li><a href="http://localhost:3000/images">Images</a></li>
-            <li><a href="http://localhost:3000/imgret">ImagesRET</a></li>
+           {/*<li><a href="http://localhost:3000/imgret">ImagesRET</a></li> */}
          
            
             

@@ -15,6 +15,7 @@ import DoctorRetrieval from './components/pages/DoctorRetrieval';
 import ContactusRetrieval from './components/pages/ContactusRetrieval';
 import patientRetrieval from './components/pages/patientRetrieval';
 import BookingRoute from './components/pages/BookingRoute';
+import bookingroute1 from './components/pages/bookingroute1';
 import DoctorSignUp from './components/pages/DoctorSignUp';
 import DoctorLogin from './components/pages/DoctorLogin';
 import chatbot from './components/pages/chatbot';
@@ -57,6 +58,7 @@ class App extends Component {
      <Route path ="/contactretrieval" component= {ContactusRetrieval} /> 
      <Route path ="/patientretrieval" component= {patientRetrieval} /> 
      <Route path ="/bookingroute" component= {BookingRoute} /> 
+     <Route path ="/bookingroute1/:id" component= {bookingroute1} /> 
      <Route path ="/doctorsignup" component= {DoctorSignUp} /> 
      <Route path ="/doctorlogin" component= {DoctorLogin} /> 
      <Route path ="/chatbot" component= {chatbot} />     
