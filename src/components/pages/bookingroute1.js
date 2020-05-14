@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import './admin.css';
 import Dropdown from 'react-dropdown';
@@ -72,6 +73,14 @@ export class bookingroute1 extends Component {
 
 
     render() {
+        const token = localStorage.usertoken
+          if(!token){
+            return(
+                <div>
+                   {this.props.history.push(`/login`)}
+                </div>
+            );
+          }
         return (
             <div id="doc" >
   
@@ -102,6 +111,10 @@ export class bookingroute1 extends Component {
              </div> 
            </div>           
         )
+    
+   
+    
+    
     }
 }
 

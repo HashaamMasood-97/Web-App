@@ -82,6 +82,8 @@ export class DoctorLogin extends Component {
     
         {/* Tabs Titles */}
         <h2 className="active"> Sign In </h2>
+
+        <h2 className="inactive underlineHover"><a href="doctorsignup">Sign Up</a> </h2>
        
 
       

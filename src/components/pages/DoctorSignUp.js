@@ -210,7 +210,7 @@ import { registerDoc } from './DoctorFunctions'
               <div className="wrap-contact100">
                 <div className="contact100-form-title" style={{backgroundImage: 'url(images/bg-01.jpg)'}}>
                   <span className="contact100-form-title-1">
-                    DOCTORS FORM
+                    DOCTOR Sign Up
                   </span>
                   <span className="contact100-form-title-2">
                     Join us and make this world a healthy place to live!

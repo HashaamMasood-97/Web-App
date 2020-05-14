@@ -33,6 +33,7 @@ import patmsg from './components/pages/patmsg';
 import docmsg  from './components/pages/docmsg';
 import images  from './components/pages/images';
 import imgret  from './components/pages/imgret';
+import signinup from './components/pages/signinup';
 
 
 
@@ -75,6 +76,7 @@ class App extends Component {
      <Route path="/docmsg/:id" component={docmsg} />
      <Route path="/images" component={images} />
      <Route path="/imgret" component={imgret} />
+     <Route path="/signinup" component={signinup} />
      <Route path ="/extra" component= {extra} />
    
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 
 export default function chatbot() {
 
@@ -64,6 +65,7 @@ export default function chatbot() {
     
     }
 
+    
     return (
         <div id="chatbot">
             <h1>Chatbot</h1>
@@ -72,4 +74,5 @@ export default function chatbot() {
             <button id="send-buttonnn">Send</button>
         </div>
     )
+    
 }
