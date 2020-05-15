@@ -18,6 +18,7 @@ import './admin.css';
        <td>{props.user.workexp}</td>
        <td>{props.user.specialisation}</td>
        <td>{props.user.date}</td>
+       <td><Link to= {"/admindoc/" +  props.user._id}><p>Edit Doctor</p>  </Link>  </td>
    </tr>
 
 
@@ -84,6 +85,9 @@ DoctorList(){
                              <th>Work Experience</th>
                              <th>Specialisation</th>                        
                              <th>User Joined</th>
+                             <th>Edit Doctor</th>
+                             
+                             
                           
                          </tr>
 

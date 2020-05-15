@@ -3,7 +3,7 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import './admin.css';
 
-export class updateinfodoc extends Component {
+export class admindoc extends Component {
     constructor (props){
         super(props)
    
@@ -20,6 +20,7 @@ export class updateinfodoc extends Component {
         this.onTextboxChangeSpecialisation=this.onTextboxChangeSpecialisation.bind(this);
         this.onTextboxChangeWorkexp=this.onTextboxChangeWorkexp.bind(this);
         this.onSubmit=this.onSubmit.bind(this);
+        this.onDelete=this.onDelete.bind(this);
    
         this.state = {
         firstName: '',
@@ -141,7 +142,15 @@ export class updateinfodoc extends Component {
           });
         }
       
-        
+        onDelete(){
+            
+            axios.delete('http://localhost:3500/homemedic/api/doctor/delete/'+ this.props.match.params.id)
+            .then(response => {
+                console.log(response);
+            });
+            this.props.history.push('/doctorretrieval');
+            
+        }
         
         onSubmit(e){
             e.preventDefault();
@@ -161,7 +170,7 @@ export class updateinfodoc extends Component {
                   
              //return to homepage after once it is updated
              
-             this.props.history.push('/profiledoc');
+             this.props.history.push('/doctorretrieval');
            
                }
 
@@ -261,7 +270,10 @@ export class updateinfodoc extends Component {
 
                     </div>
    
-          
+                    <div className="form-group"      >       
+                    <input type="submit"  style={{background: "black" , textAlign:"center", marginLeft:"280px", marginTop:"0px"}} value="Delete Profile" className="btn btn-primary" onClick={this.onDelete}/>
+
+                    </div>
             
   
     </div>
@@ -269,4 +281,4 @@ export class updateinfodoc extends Component {
     }
 }
 
-export default updateinfodoc
+export default admindoc

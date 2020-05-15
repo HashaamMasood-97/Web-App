@@ -13,6 +13,7 @@ import './admin.css';
        <td>{props.user.phone}</td>
        <td>{props.user.gender}</td>   
        <td>{props.user.date}</td>
+       <td><Link to= {"/adminuser/" +  props.user._id}><p>Edit User</p>  </Link>  </td>
 
    </tr>
 
@@ -73,6 +74,7 @@ UserList(){
                              <th>Contact Number</th>
                              <th>Gender</th>
                              <th>User Joined</th>
+                             <th>Edit User</th>
                           
                          </tr>
 

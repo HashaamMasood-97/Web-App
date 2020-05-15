@@ -34,6 +34,8 @@ import docmsg  from './components/pages/docmsg';
 import images  from './components/pages/images';
 import imgret  from './components/pages/imgret';
 import signinup from './components/pages/signinup';
+import admindoc from './components/pages/admindoc';
+import adminuser from './components/pages/adminuser';
 
 
 
@@ -77,6 +79,8 @@ class App extends Component {
      <Route path="/images" component={images} />
      <Route path="/imgret" component={imgret} />
      <Route path="/signinup" component={signinup} />
+     <Route path="/admindoc/:id" component={admindoc} />
+     <Route path="/adminuser/:id" component={adminuser} />
      <Route path ="/extra" component= {extra} />
    
 
