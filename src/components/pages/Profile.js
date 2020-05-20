@@ -131,7 +131,6 @@ class Profile extends Component {
               </tbody>
           </table>
               </div>
-              my name is mery
            
           
           
