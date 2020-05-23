@@ -28,20 +28,6 @@ class Profile extends Component {
     this.props.history.push(`/login`)
   }  
 
-  
-  
-
-
- 
-
-
-      
-    
-
- 
-      
-    
-  
       componentDidMount() {
       
         const token = localStorage.usertoken
@@ -89,13 +75,12 @@ class Profile extends Component {
     return (
      <div>
             <p class="botp" style={{display: "inline-block"}}>Welcome  {this.state.first_name} {this.state.last_name} </p>
-           <div class="botss"  style={{display: "inline-block"}}>
-           <button  onClick={this.logOut.bind(this)}   > Logout</button>
+            <div class="botss"  style={{display: "inline-block"}}>
+            <button  onClick={this.logOut.bind(this)}   > Logout</button>
             </div>
             <div class="botsss"  style={{display: "inline-block"}   } >
              <Link to="./bookingroute"   style={{ textDecoration: 'none' }}> <h1>Book Doctor</h1></Link>
                 </div>
-
                 <div class="botsss1"    style={{display: "inline-block"}}>     <a href="chatbot"   style={{ textDecoration: 'none' }}> <h1> Chatbot  </h1> </a> </div>
                 <div class="botsss2"    style={{display: "inline-block"}}>     <Link to={"/appointments/"+this.state.user_id}    style={{ textDecoration: 'none' }}> <h1> Appointments  </h1> </Link> </div>
                 <div class="botsss3"    style={{display: "inline-block"}}>     <Link to={"/updateinfouser/"+this.state.user_id}    style={{ textDecoration: 'none' }}> <h1> Update Info  </h1> </Link> </div>
@@ -131,17 +116,6 @@ class Profile extends Component {
               </tbody>
           </table>
               </div>
-           
-          
-          
-         
-
-     
- 
-        
-          
-
- 
             </div>
     )
   }

@@ -10,9 +10,10 @@ import './admin.css';
         
      
 
+    <ul>
       
-       <ul>Your new booking from {props.user.user_first} {props.user.user_last}. Scheduled  at  {props.user.timeslot}</ul>
-     
+       <li>Your new booking from {props.user.user_first} {props.user.user_last}. Scheduled  at  {props.user.timeslot}</li>
+       </ul>
    
        
        

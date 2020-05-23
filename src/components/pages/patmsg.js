@@ -5,27 +5,10 @@ import './admin.css';
 
 
 
- const User= props =>(
-
-        
-     
-
-      
-       <ul>Your booking from Dr.{props.user.firstName} {props.user.lastName} is {props.user.bookingstatus}. {props.user.reason}</ul>
-     
-   
-       
-       
-      
-    
-     
-
-
-
- 
-
-
-
+ const User= props =>(    
+     <ul>
+       <li>Your booking from Dr.{props.user.firstName} {props.user.lastName} is <b>{props.user.bookingstatus}</b>. {props.user.reason}</li>
+    </ul>
  )
 
 export class patmsg extends Component {

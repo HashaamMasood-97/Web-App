@@ -66,6 +66,7 @@ onChangeCmessage(e){
 
 
 onSubmit(e){
+  if(window.confirm('Are you sure you want to submit the Form?')) {  
   e.preventDefault(); 
   
 // code to connect backend 
@@ -82,10 +83,11 @@ c_message: this.state.c_message
 axios.post('http://localhost:3500/homemedic/api/contact/add', newodo)
 .then(res => console.log(res.data));
 
+
 this.props.history.push('/');
 
 
-
+}
 
 
   }
@@ -150,7 +152,7 @@ this.props.history.push('/');
                           <input className="input100" type="email" name="email" placeholder="Enter email addess" value={this.state.c_address}  onChange={this.onChangeCaddress} />
                           <span className="focus-input100" />
                         </div>
-                        <div className="wrap-input100 validate-input" data-validate="Phone is required">
+                        <div className="wrap-input100 validate-input" data-validate="valid Phone is required">
                           <span className="label-input100">Phone:</span>
                           <input className="input100" type="text" name="phone" placeholder="Enter phone number"  value={this.state.c_phone}  onChange={this.onChangeCphone} />
                           <span className="focus-input100" />
