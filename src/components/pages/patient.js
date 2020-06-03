@@ -192,7 +192,9 @@ onChangePaddress(e){
 
 
 onSubmit(e){
+  if(window.confirm('Are you sure you want to submit the Form?')) {  
     e.preventDefault(); 
+
 // code to connect backend 
 
 const newTodo ={
@@ -223,7 +225,7 @@ axios.post('http://localhost:3500/homemedic/api/patient/add', newTodo)
 
 this.props.history.push('/');
 
-
+  }
     }
 
 

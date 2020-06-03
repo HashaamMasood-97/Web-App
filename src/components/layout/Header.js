@@ -25,9 +25,11 @@ import{Link} from 'react-router-dom';
             <li><a href="http://localhost:3000/signinup">Sign In/Up</a></li>
             <li><a href="http://localhost:3000/doctor">Doctors</a></li>
             <li><a href="http://localhost:3000/contactus">Contact Us</a></li>
-            <li><a href="http://localhost:3000/admin">Admin</a></li>
+            {/*  <li><a href="http://localhost:3000/admin">Admin</a></li>
             <li><a href="http://localhost:3000/images">Images</a></li>
-           {/*<li><a href="http://localhost:3000/imgret">ImagesRET</a></li> */}
+            <li><a href="http://localhost:3000/imgret">ImagesRET</a></li> 
+          <li><a href="http://localhost:3000/rivescriptcb">ImagesRETttt</a></li>
+            <li><a href="http://localhost:3000/newcb">newcb</a></li> */} 
          
            
             

@@ -8,7 +8,7 @@ const API_URL = "http://localhost:3500/";
  const User= props =>(
    <tr>
        <td>{props.user.imageName}</td>
-       <td>{props.user.imageData}</td>
+       <td><img src={props.user.imageData}/></td>
        
        
       

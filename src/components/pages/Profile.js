@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { getProfile, getAppointment } from './UserFunctions'
 import {Link} from 'react-router-dom';
 import './admin.css';
-import axios from 'axios';
+
 
 class Profile extends Component {
   constructor() {

@@ -1,0 +1,159 @@
+! version = 2.0
+! sub gs 500 = gs500
+! sub motorcycle = motorbike
+! sub motor cycle = motorbike
+! sub motor bike = motorbike
+! sub bike = motorbike
+! sub engine = motor
+! sub tires = tyres
+! sub output = power
+! sub spark plugs = plugs
+! sub sparkplugs = plugs
+! sub lam = learner legal
+! sub lams = learner legal
+! sub learner approved = learner legal
++ *
+- It's all about cooking today !
++ * expert
+- I don't know everything, but I know a bit about Suzuki GS500s.
++ * expert *
+- I don't know everything, but I know a bit about Suzuki GS500s.
++ do you ride a motorbike
+- Indeed I do.
+- Yes, I ride a Suzuki GS500.
+- Yes, are you a biker too?
++ * ride a *
+- A <star2>, not a bad bike.
++ what * ride
+- I ride a Suzuki GS500.
++ are they still made
+- If you line in Colombia you can buy a new one.
+- They stopped making them in 2014.
+- The Global Financial Crisis killed the factory in Spain.
++ * still make them
+- If you live in Colombia you can buy a new one.
+- They stopped making them in 2014.
+- The Global Financial Crisis killed the factory in Spain.
++ what motor *
+- A GS500 has a parallel twin motor of 487cc.
++ * size * motor *
+- A GS500 has a parallel twin motor of 487cc.
++ * size * motor
+- A GS500 has a parallel twin motor of 487cc.
++ * big * motor
+- A GS500 has a parallel twin motor of 487cc.
++ * power *
+- About 30 KW at the rear wheel.
++ * powerful
+- About 30 KW at the rear wheel.
++ * fast *
+- They are quick, not fast - 0 to 100kph in 6 seconds.
++ * fast
+- They are quick, not fast - 0 to 100kph in 6 seconds.
++ * top speed
+- About 170 kph. Fast enough to destroy your license.
++ * big *
+- They are not a big bike in terms of engine capacity.
+- They feel like a bigger bike than they actually are.
++ * heavy *
+- Weighs about 200 kg wringing wet.
++ * weigh
+- Weighs about 200 kg wringing wet.
++ * fuel *
+- It’s not necessary but I like to use expensive 98 Octane fuel.
+- They will run on anything.
++ * best fuel *
+- It’s not necessary but I like to use expensive 98 Octane fuel.
+- They will run on anything.
++ * fuel * best
+- It’s not necessary but I like to use expensive 98 Octane fuel.
+- They will run on anything.
++ * fuel tank *
+- The fuel tank holds 20 litres - 15 litres on the main supply and
+another 5 litres on “Reserve”.
++ * tank
+- The fuel tank holds 20 litres - 15 litres on the main supply and
+another 5 litres on “Reserve”.
++ how far * tank
+- About 350 ks before I have to use the Reserve.
++ * reserve
+- The bike doesn't have a fuel gauge. You just keep riding until it
+splutters and then switch to the Reserve supply. Then you go an fill
+up again.
++ * reserve *
+- The bike doesn't have a fuel gauge. You just keep riding until it
+splutters and then switch to the Reserve supply. Then you go an fill
+up again.
++ * fuel economy *
+- Around 3.6 litres per 100 ks.
+- The Fuelly website will give you lots of information - <a href =
+“http://www.fuelly.com/motorcycle/suzuki” target=“_blank”> Fuelly
+Results for Suzuki Motorcycles </a>.
++ * oil *
+- Use the best you can afford.
+- Avoid fully synthetic oils - they can cause oil leaks on these old
+fashioned motors.
+- I’ve always used a ‘diesel’ oil like <href = “https://
+www.penriteoil.com.au/products/hpr-diesel-5-5w-40-semi-syn” target =
+“_blank> Penrite HPR Diesel 5 </a>
++ * diesel oil *
+- Because diesel oils usually keep an engine cleaner and have a
+higher zinc count.
++ * clutch slip *
+- A car oil with certain additives can cause clutch slip - diesel
+oils don’t use these additives.
+- Clutch slip is usually caused by a worn out clutch, not the oil.
++ * tyres *
+- The standard size tyres for a GS500 are 110/70-17 (front) and
+130/70-17 (rear).
++ * tyres do you *
+- I’m a big fan of Michelin Radials.
+- I’ve used Pirelli and Bridgestone and Michelin tyres.
++ * tyre *
+- Correct tyre pressure is crucial on these bikes.
++ * plugs
+- I like the NGK Iridium plugs - long life and hot little spark.
++ * plugs *
+- I like the NGK Iridium plugs - long life and hot little spark.
++ * air filter
+- The stock Suzuki ones are good enough.
+- I prefer the K&N washable air filters - cost more upfront but
+lasts forever.
++ * air filter *
+- The stock Suzuki ones are good enough.
+- I prefer the K&N washable air filters - cost more upfront but
+lasts forever.
++ * safe
+- No motorcycle is 'safe' - they are intrinsically unstable.
+- Only as safe as the rider.
+- Riders make more mistakes than bikes do.
++ * safe *
+- No motorcycle is 'safe' - they are intrinsically unstable.
+- Only as safe as the rider.
+- Riders make more mistakes than bikes do.
++ * learn *
+- In NSW it's a "Learner Legal" bike.
+- A GS500 can be a little top heavy for a learner rider of shorter
+stature.
+- They are cheap to fix - every learner will drop their bike at some
+stage.
++ * learner
+- In NSW it's a "Learner Legal" bike.
+- A GS500 can be a little top heavy for a learner rider of shorter
+stature.
+- They are cheap to fix - every learner will drop their bike at some
+stage.
++ * learner rider
+- In NSW it's a "Learner Legal" bike.
+- A GS500 can be a little top heavy for a learner rider of shorter
+stature.
+- They are cheap to fix - every learner will drop their bike at some
+stage.
++ * learner legal
+- In NSW a "Learner Legal" bike has a power to weight ratio of
+150KWs per 1000Kgs.<br> With 30KWs and 200Kgs a GS500 is right on
+the money.
++ * learner legal *
+- In NSW a "Learner Legal" bike has a power to weight ratio of
+150KWs per 1000Kgs.<br> With 30KWs and 200Kgs a GS500 is right on
+the money.

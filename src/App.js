@@ -23,7 +23,6 @@ import Profile from './components/pages/Profile';
 import profiledoc from './components/pages/profiledoc';
 import appointments from './components/pages/appointments';
 import docappointments from './components/pages/docappointments';
-import extra from './components/pages/extra';
 import updateinfouser from './components/pages/updateinfouser';
 import updateinfodoc from './components/pages/updateinfodoc';
 import weeklytimetable from './components/pages/weeklytimetable';
@@ -36,7 +35,10 @@ import imgret  from './components/pages/imgret';
 import signinup from './components/pages/signinup';
 import admindoc from './components/pages/admindoc';
 import adminuser from './components/pages/adminuser';
-
+import admins from './components/pages/admins';
+//import rivescriptcb from './components/pages/myChatbot/rivescriptcb';
+//import newcb from './components/pages/myChatbot/newcb';
+//import extra from './components/pages/extra';
 
 
 
@@ -64,7 +66,7 @@ class App extends Component {
      <Route path ="/bookingroute1/:id" component= {bookingroute1} /> 
      <Route path ="/doctorsignup" component= {DoctorSignUp} /> 
      <Route path ="/doctorlogin" component= {DoctorLogin} /> 
-     <Route path ="/chatbot" component= {chatbot} />     
+     <Route path ="/chatbot" component= {chatbot} />   
      <Route path="/profile" component={Profile} />
      <Route path="/profiledoc" component={profiledoc} />
      <Route path="/appointments/:id" component={appointments} />
@@ -81,7 +83,16 @@ class App extends Component {
      <Route path="/signinup" component={signinup} />
      <Route path="/admindoc/:id" component={admindoc} />
      <Route path="/adminuser/:id" component={adminuser} />
-     <Route path ="/extra" component= {extra} />
+     <Route path="/admins" component={admins} />
+     
+     
+     
+     
+     
+     
+     {/*<Route path ="/extra" component= {extra} />
+     <Route path ="/rivescriptcb" component= {rivescriptcb} />
+     <Route path ="/newcb" component= {newcb} /> */}     
    
 
   

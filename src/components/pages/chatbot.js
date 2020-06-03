@@ -18,11 +18,11 @@ export default function chatbot() {
 
         inputEl.value = ''
         
-        outputEl.value += `> ${message}\n`
+        outputEl.value += `You: ${message}\n`
         
 
         setTimeout(() => {
-          outputEl.value += `${messages(message)}\n`
+          outputEl.value += `Expert: ${messages(message)}\n`
           }, 300)
         
     
@@ -33,7 +33,7 @@ export default function chatbot() {
         switch (message) {
           case 'hello':
           case 'hi':
-          return 'Hello!' 
+          return 'Hello! How may I assisst you now?' 
           case 'bye':
           case 'goodbye':
           return 'See ya!'
@@ -69,9 +69,15 @@ export default function chatbot() {
     return (
         <div id="chatbot">
             <h1>Chatbot</h1>
-            <textarea id="outputtt" disabled="disabled">> Hi, How are you feeling today?       (Good or bad)                           </textarea>
-            <input id="inputtt" autofocus />
+            <fieldset>
+        <legend>Conversation</legend>
+            <textarea id="outputtt" disabled="disabled"/> 
+                 </fieldset>
+              <fieldset id="newfs"><legend> Ask a Question </legend>  
+            <input id="inputtt" autofocus placeholder="send message" />
             <button id="send-buttonnn">Send</button>
+            
+            </fieldset>
         </div>
     )
     
