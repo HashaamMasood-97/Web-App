@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './send.png'
 
 export class home extends Component {
     render() {
@@ -21,21 +22,21 @@ export class home extends Component {
                               <div className="sidebar_item">
                                 {/* insert your sidebar items here */}
                                 <h3>Latest News</h3>
-                                <h4>New Website Launched</h4>
-                                <h5>June 1st, 2014</h5>
-                                <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+                                <h4>COVID'19 ALERT!</h4>
+                                <h5>June 1st, 2020</h5>
+                                <p>Confirmed Cases: 80463.<br/> Recovered Cases: 28,923 <br/>Total Deaths: 1,688 <br /><a href="https://en.wikipedia.org/wiki/COVID-19_pandemic_by_country_and_territory">Read more</a></p>
                               </div>
                               <div className="sidebar_base" />
                             </div>
                             <div className="sidebar">
                               <div className="sidebar_top" />
                               <div className="sidebar_item">
-                                <h3>Useful Links</h3>
+                                <h3>Connect With Us!</h3>
                                 <ul>
-                                  <li><a href="#">link 1</a></li>
-                                  <li><a href="#">link 2</a></li>
-                                  <li><a href="#">link 3</a></li>
-                                  <li><a href="#">link 4</a></li>
+                                  <li><a href="https://web.facebook.com/">Facebook</a></li>
+                                  <li><a href="https://www.instagram.com/">Instagram</a></li>
+                                  <li><a href="https://twitter.com/">Twitter</a></li>
+                                  <li><a href="https://www.snapchat.com/">Snapchat</a></li>
                                 </ul>
                               </div>
                               <div className="sidebar_base" />
@@ -43,11 +44,11 @@ export class home extends Component {
                             <div className="sidebar">
                               <div className="sidebar_top" />
                               <div className="sidebar_item">
-                                <h3>Search</h3>
+                                <h3>Feedback</h3>
                                 <form method="post" action="#" id="search_form">
                                   <p>
-                                    <input className="search" type="text" name="search_field" defaultValue="Enter keywords....." />
-                                    <input name="search" type="image" style={{border: 0, margin: '0 0 -9px 5px'}} src="style/search.png" alt="Search" title="Search" />
+                                    <input className="search" type="text" name="search_field" placeholder="..." />
+                                     <button style={{marginLeft:10}}> Send</button>
                                   </p>
                                 </form>
                               </div>
@@ -57,23 +58,23 @@ export class home extends Component {
                           <div id="content">
                             {/* insert the page content here */}
                             <h1>Online Medical Facilitation</h1>
-                            <p>This standards compliant, simple, fixed width website template is released as an 'open source' design (under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>), which means that you are free to download and use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from HTML5webtemplates.co.uk' link in the footer of the template, but other than that...</p>
-                            <p>This template is written entirely in <strong>HTML5</strong> and <strong>CSS</strong>, and can be validated using the links in the footer.</p>
-                            <p>You can view more free HTML5 web templates <a href="http://www.html5webtemplates.co.uk">here</a>.</p>
-                            <p>This template is a fully functional 5 page website, with an <a href="examples.html">examples</a> page that gives examples of all the styles available with this design.</p>
-                            <h2>Browser Compatibility</h2>
-                            <p>This template has been tested in the following browsers:</p>
+                            <p>As Pakistan slowly becomes one of the prime destinations for medical care in the world, we at HomeMedic believe in bringing that care to you. <strong>HomeMedic</strong> works and engages with some of the best doctors in Pakistan, to ensure that you get the best medical treatment. In times like this, what is needed is a guiding hand to coordinate and simplify every step of your treatment</p>
+                            <p>We bring to you the best doctors and state of the art facilities and tailor the entire journey to your every need, to ensure you have the best and most comfortable experience.</p>
+                            <p>Health is an experience of happiness in the soul, mind, and senses.</p>
+                            <p>Life is a combination of body, mind, senses, and spirit. In HomeMedic, we help you heal.</p>
+                            <h2>What we Offer?</h2>
+                            <p>We connect you to your desired doctor at your doorstep.</p>
                             <ul>
-                              <li>Internet Explorer 9</li>
-                              <li>FireFox 25</li>
-                              <li>Google Chrome 31</li>
+                              <li>Chatting Service, talk to our expert chatbot.</li>
+                              <li>Book your Appoinment Online.</li>
+                              <li>Keep track of your Health.</li>
                             </ul>
                           </div>
                         </div>
                         <div id="content_footer" />
                         <div id="footer">
-                          <p><a href="index.html">Home</a> | <a href="examples.html">Examples</a> | <a href="page.html">A Page</a> | <a href="another_page.html">Another Page</a> | <a href="contact.html">Contact Us</a></p>
-                          <p>HOME MEDIC | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">Website templates</a></p>
+                          <p><a href="/">Home</a> | <a href="http://localhost:3000/about">ABOUT US</a> | <a href="http://localhost:3000/doctor">DOCTORS</a> |  <a href="http://localhost:3000/contactus">Contact Us</a></p>
+                          <p>HOME MEDIC | <a href="http://validator.w3.org/check?uri=referer">HASHAAM MASOOD</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">USMAN BASHIR</a> </p>
                         </div>
                       </div>
                     </div>

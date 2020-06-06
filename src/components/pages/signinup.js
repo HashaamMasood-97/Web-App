@@ -14,30 +14,24 @@ export class signinup extends Component {
 
     render() {
         return (
-          <div className="fill">
+          <div id="siu">
              
-            <div id="aaa">
-            <a href="./doctorlogin">
-              <div class="box" style={{display: "inline-block"}}> 
-            <h2>Doctor</h2> <br/>
-          
-            </div>
-            </a>
-            <a href="./login">
-             <div class="box1"   style={{display: "inline-block"}}>
-            <h2  >User</h2> <br/>
-            </div>
-            </a>
-            
-            {/*<a href="./extra"  >
-             <div class="box1"   style={{display: "inline-block"}}>
-            <h2>Extra</h2> <br/>
-            </div>
-            </a> */}
-            </div>
-           
+                  <div id="equal">
+                    <h1>Welcome!</h1>
+                    <h1>Are you a?</h1>
+                    </div>
+                    <div id="nc">
+                        <div className="form-group" style={{display: "inline-block"}} ><a href="/login">
+                       <input type="submit" value="   USER   " className="btn btn-primary"  />
+                       </a> </div>
+                        <div className="form-group"   style={{display: "inline-block"}} ><a href="/doctorlogin">
+                       <input type="submit" value="DOCTOR" className="btn btn-primary"  />
+                       </a></div>
+                       </div>
+    
+                </div>
 
-          </div>  
+     
             
         );
     }

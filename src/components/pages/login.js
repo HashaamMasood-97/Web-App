@@ -46,7 +46,7 @@ class login extends Component {
     const errors = {}
     const emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     errors.email = !user.email.match(emailformat) ?
-       console.log("Invalid Email" ): ""
+       errors.email="Invalid Email" : ""
     errors.password = user.password.length < 6 ?
         "Password should be more than 6 characters" : ""
     console.log(errors)
@@ -88,6 +88,8 @@ class login extends Component {
         <form>
           <input type="text" id="login" className="fadeIn second" name="login" placeholder="Username"    value={this.state.email}
                   onChange={this.onChangeEmail} />
+             
+                  
           <input type="password" id="password" className="fadeIn third" name="login" placeholder="Password" value={this.state.password}
                   onChange={this.onChangePassword} />
          

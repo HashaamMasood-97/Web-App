@@ -48,6 +48,10 @@ export default function chatbot() {
           if (message.includes('good')) return 'Great. How may I assisst you now?'
           if (message.includes('bad')) return 'Do not worry we will take care of your health.\nSelect your symptoms from the following:\nsore throat || fever || cold' 
           if (message.includes('fever')) return 'you should book our general physician'
+          if (message.includes('feeling')) return 'Oh, thats bad ! can you please elaborate'
+          if (message.includes('fever')) return 'No need to worry ! Book your general physician'
+          if (message.includes('thank you')) return 'Its always a pleasure assisting you'
+      
           return 'bad input'
           }
           }

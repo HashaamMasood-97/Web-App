@@ -696,3 +696,21 @@ padding-top: 7px;
     margin: auto;
     
 }
+
+#siu{
+    width: 60%;
+    margin: auto;
+
+}
+
+#equal h1{
+    text-align: center;
+    color: #E77;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#nc{
+    width:70%;
+    margin: auto;
+    margin-top: 50px;
+}

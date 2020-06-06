@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import './admin.css';
-
+import { getProfile } from './UserFunctions'
 
 
  const User= props =>(
@@ -39,11 +39,38 @@ export class appointments extends Component {
 
     constructor(props) {
         super(props);
-        this.state={homemedic: []};
+        this.state={
+            homemedic: [],
+            user_first:'',
+            user_last:''
+        
+        
+        
+        };
+            
+            
+            
     }
 
 
-    componentDidMount(){
+    userid(){
+     
+        const token = localStorage.usertoken
+        getProfile(token).then(res => {
+         if(token){
+          this.setState({
+            user_id:res._id,
+            user_first:res.first_name,
+            user_last:res.last_name, 
+          })}
+          else{
+            console.log('error')
+         
+          }
+        }) 
+      }
+
+      form(){
         axios.get('http://localhost:3500/homemedic/api/patients/'+this.props.match.params.id)
         .then(response => {
             this.setState({homemedic: response.data});
@@ -52,6 +79,10 @@ export class appointments extends Component {
             console.log(error);
         }
         )
+      }
+    componentDidMount(){
+       this.form()
+       this.userid()
     }
 
     
@@ -67,7 +98,7 @@ PatientList(){
     render() {
         return (
             <div id="div23">
-            <h3  id="abcdef"> Your Appointments </h3>
+            <h3  id="abcdef">{this.state.user_first}, Your Appointments </h3>
             <table className="school" style={{marginTop:20}} >
                  <thead>
                          <tr>
