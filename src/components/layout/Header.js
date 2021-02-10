@@ -1,9 +1,12 @@
 import React from 'react'
 import{Link} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 
  function Header() {
+
     return (
+
         <div id="header">
         <div id="logo">
           <div id="logo_text">
@@ -38,7 +41,7 @@ import{Link} from 'react-router-dom';
         </div>
       </div>
     )
-}
-
+  
+ }
  
 export default Header;
